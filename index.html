@@ -1725,7 +1725,19 @@ Federation Application: Bio-compatible design treats threshold dynamics as desig
         }
 
         function showSynthesis() {
-            alert('Synthesis view is now integrated below the dimension tabs!');
+            // FIXED: Automatically switch to Dynamics tab and scroll down.
+            // This replaces the old, confusing alert.
+            
+            // 1. Switch to Dynamics tab
+            switchDimension('dynamics'); 
+            
+            // 2. Render content immediately (already happens in switchDimension)
+            
+            // 3. Scroll to the synthesis section title
+            const synthesisHeader = document.querySelector('.synthesis-section h3');
+            if (synthesisHeader) {
+                synthesisHeader.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
 
         function exportAnalysis() {
