@@ -558,11 +558,57 @@
             display: flex;
         }
         
+        /* Timescale Synthesis */
+        .timescale-synthesis {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed var(--border);
+        }
+
+        .timescale-synthesis h4 {
+            font-family: 'Spectral', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+            border-left: 4px solid var(--dynamics);
+            padding-left: 10px;
+        }
+
+        .timescale-synthesis .pattern-box {
+            background: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+        
+        .timescale-synthesis .pattern-box h5 {
+            font-weight: 600;
+            color: var(--dynamics);
+            margin-bottom: 0.5rem;
+        }
+
+        .timescale-synthesis .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .timescale-synthesis .solution-card {
+            background: #eef2ff;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--primary);
+            font-size: 0.9rem;
+        }
+        
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             .dimensions-grid,
             .scenario-grid,
-            .synthesis-grid {
+            .synthesis-grid,
+            .timescale-synthesis .solution-grid {
                 grid-template-columns: 1fr;
             }
             .dimension-tabs {
@@ -579,7 +625,7 @@
         <header>
             <h1>ABCD Lens Explorer</h1>
             <p class="subtitle">Four Dimensions of Human Agency</p>
-            <p class="tagline">Ethics Beyond Boundaries • Chapter 3</p>
+            <p class="tagline">Coordinating Across Biological Timescales—Understanding the 500-million-year biology / 50-year institution mismatch</p>
         </header>
 
         <!-- Introduction -->
@@ -631,9 +677,9 @@
             <div class="scenario-grid">
                 <div class="scenario-card" onclick="selectScenario('stress')" id="scenario-stress">
                     <div class="scenario-icon">😰</div>
-                    <span class="scenario-scale">Personal → Team</span>
+                    <span class="scenario-scale">Immediate → Decades</span>
                     <h3>Chronic Workplace Stress</h3>
-                    <p>You're experiencing burnout. Sleep disrupted, always on edge, quality of work declining. How do all four dimensions apply?</p>
+                    <p>You're experiencing burnout. Stress is operating across multiple biological timescales simultaneously, leading to predictable functional erosion.</p>
                 </div>
 
                 <div class="scenario-card" onclick="selectScenario('safety')" id="scenario-safety">
@@ -687,6 +733,9 @@
 
             <!-- Dimension Content Container -->
             <div id="dimension-container"></div>
+            
+            <!-- NEW: Timescale Synthesis Section -->
+            <div id="timescale-synthesis-container"></div>
 
             <!-- Action Buttons -->
             <div class="action-buttons">
@@ -714,101 +763,211 @@
             stress: {
                 title: "Chronic Workplace Stress",
                 icon: "😰",
-                scale: "Personal → Team",
-                description: "You've been working 60-hour weeks for six months. Sleep is disrupted, you're always on edge, small frustrations trigger outsized reactions. Your work quality is declining, relationships are strained, and you feel trapped—need the job, can't sustain the pace. This is affecting not just you, but your team's morale and performance.",
+                scale: "Immediate → Decades",
+                description: "You've been working 60-hour weeks for six months. Sleep is disrupted, you're always on edge, small frustrations trigger outsized reactions. Your work quality is declining, relationships are strained, and you feel trapped—need the job, can't sustain the pace. This chronic stress is operating across multiple biological timescales simultaneously.",
                 
                 dimensions: {
                     agency: {
-                        intro: "Agency examines who can act and what shapes their capability space. Stress isn't just mental—it's physiological state that directly modulates what you can actually do.",
-                        scales: ["Personal", "Team", "Institutional"],
+                        intro: "Agency examines capability across biological timescales. Robert Sapolsky's research shows your coordination capacity varies from seconds (neurotransmitter function) to decades (life history effects). Understanding which timescales are affected reveals intervention opportunities.",
+                        
+                        scales: ["Immediate (seconds-minutes)", "Acute (hours-days)", "Chronic (weeks-months)", "Baseline (years-decades)"],
+                        
                         questions: {
-                            Personal: [
-                                "What is your current physiological state? (HPA axis activation, autonomic tone, cortisol levels affect your actual capability to choose and execute)",
-                                "What buffers expand your agency? (sleep, social support, predictable routines, control over schedule)",
-                                "What shrinks it? (chronic activation, lack of control, role ambiguity, resource scarcity)"
+                            "Immediate (seconds-minutes)": [
+                                "Right now, as you think about your stress: Can you focus on this analysis? Notice your attention quality, mental clarity, ability to process information. This IS your immediate agency—neurotransmitter coordination in action.",
+                                "What's your physiological state? (Heart rate, muscle tension, breathing pattern, mental fog or clarity) These immediate biological markers affect what you can actually do in the next few minutes.",
+                                "If you tried to have a difficult conversation or make a complex decision right this second, would your biology support it? State-dependent agency means capability fluctuates—sometimes you have it, sometimes you don't."
                             ],
-                            Team: [
-                                "How does collective stress spread through the team? (mirror neurons, emotional contagion, shared load)",
-                                "What coalition structures could distribute load differently?",
-                                "Who has capability to intervene—and what expands their agency to act?"
+                            
+                            "Acute (hours-days)": [
+                                "Looking at your stress today: Is it enhancing performance (sharp focus, energized action) or degrading it (scattered attention, exhausted, reactive)? Same biological system (cortisol activation), opposite effects depending on duration and context.",
+                                "Sapolsky's key finding: Acute stress (hours) sharpens attention and boosts memory—helpful for challenges. But if activation doesn't resolve by end of day, you're entering dangerous territory. Where are you on this spectrum today?",
+                                "What would help you reset before stress becomes chronic? (Brief walk, conversation, exercise, sleep) Acute stress becomes harmful when it persists without recovery. Intervention timing matters."
                             ],
-                            Institutional: [
-                                "What institutional design creates chronic activation? (deadline structures, meeting culture, always-on norms)",
-                                "What policies could expand worker agency over their own state? (flexible scheduling, explicit rest periods, workload monitoring)",
-                                "How do extractive patterns externalize stress costs to individuals rather than internalizing them systemically?"
+                            
+                            "Chronic (weeks-months)": [
+                                "Over the past 3-6 months, has your capability expanded or contracted? Can you still focus like you could 6 months ago? Make decisions as well? Regulate emotions as effectively? Chronic stress literally damages hippocampus and prefrontal cortex.",
+                                "Track capability changes: Memory worse? Creativity diminished? More reactive/irritable? Harder to learn new things? These aren't personality flaws—they're measurable biological degradation from weeks-months of unrecovered stress.",
+                                "If you've crossed from acute (helpful) to chronic (harmful) stress, individual 'stress management' won't fix it. You need context change at the weeks-months timescale: workload reduction, schedule flexibility, or exit. The biology requires sustained recovery, not just daily coping."
+                            ],
+                            
+                            "Baseline (years-decades)": [
+                                "What early life experiences shaped your stress response baseline? Supportive childhood creates lower baseline cortisol, better stress recovery. Trauma/neglect creates hypersensitive HPA axis—activates easier, recovers slower. This isn't about blame; it's about recognizing your biological starting point.",
+                                "How does your life history affect current capability? Two people in identical jobs may have radically different stress tolerance based on decades of prior programming. Your baseline is your baseline—but it's not fixed forever. Years of new experience can partially reprogram even deeply embedded patterns.",
+                                "Connection to your PRF: Your phenomenological reference framework was shaped over years by formative experiences. So was your biological stress system. They're linked—how you interpret situations (PRF) affects biological activation, which affects capability to respond coherently."
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Agency Dimension:\n\nYour stress isn't weakness—it's state-dependent capability contraction. Sapolsky's research shows chronic glucocorticoids literally narrow your option set by affecting hippocampal function, decision-making capacity, and stress response. Agency requires physiological substrate.\n\nAt team level, stress is contagious through mirror neuron networks and shared load patterns. One person's burnout affects the whole system—this is nested agency. At institutional level, extractive design (quotas without recovery time, metrics without meaning) systematically depletes capability while externalizing costs to individuals.\n\nKey insight: Agency here is writable. Sleep, HRV training, social buffering, and control over schedule literally expand your policy space—what your brain can access. Connection to PRF: Your past experiences with control vs. helplessness shape how quickly stress depletes agency. Connection to SAGE: This is a case where Engaging requires monitoring your physiological state as a leading indicator—when HRV drops or sleep degrades, your agency to execute well-intended plans contracts."
+                        
+                        expert: `Expert ABCD Analysis - Agency Across Timescales:
+
+**The Multi-Timescale Reality:**
+
+Your stress isn't happening at one level—it's cascading across nested biological timescales simultaneously:
+
+**Immediate (seconds-minutes):** Right now, your neurotransmitter balance determines whether you can focus on this analysis. If you're depleted (poor sleep, chronic activation), dopamine/serotonin function is impaired—present-moment agency is compromised regardless of good intentions.
+
+**Acute (hours-days):** Sapolsky's research: acute stress (minutes to hours) is BENEFICIAL. Cortisol sharpens attention, boosts memory, mobilizes energy. Your ancestors who activated this system to flee predators survived. The problem: modern stressors don't resolve. Your stress about work deadlines triggers the same cascade designed for lion attacks—but there's no resolution, no recovery.
+
+**Critical threshold:** When does acute become chronic? Usually when activation persists beyond 8-12 hours without recovery, starts affecting sleep, continues multiple days without break. Most people don't notice they've crossed this threshold until damage has begun.
+
+**Chronic (weeks-months):** This is where catastrophe happens. Weeks of unrecovered stress creates measurable brain changes:
+- Hippocampus shrinks → memory impairment, can't access past coherently
+- Prefrontal cortex function declines → worse planning, impulse control, emotional regulation  
+- Neuroplasticity reduced → harder to learn, adapt, change patterns
+- Result: ALL agency components degraded
+
+**Baseline (years-decades):** Your current stress response was programmed by early life. If you experienced chronic early stress, your HPA axis is hypersensitive—lower threshold for activation, slower recovery, higher baseline cortisol. This means you hit chronic territory faster than someone with supportive early environment. Not fair, but biological reality.
+
+**THE CASCADE PATTERN:**
+
+Watch how timescales interact: Boss criticizes you publicly (instant event) → Amygdala activation, cortisol spike (seconds) → Rumination begins (minutes-hours) → Sleep disrupted that night (hours) → Next day tired, more reactive (days) → More conflicts, pattern establishes (weeks) → Chronic baseline anxiety (months) → Hippocampal damage, capability degradation (months-years).
+
+One instant event → decade-long trajectory through timescale cascade.
+
+**INTERVENTION BY TIMESCALE:**
+
+- **Immediate:** Breathing exercises, brief walk → interrupt cortisol cascade before it locks in
+- **Acute:** Cognitive reframing, social support → prevent rumination from becoming chronic
+- **Chronic:** Need context change (workload reduction, schedule flex, job change) → can't meditation your way out of extractive design
+- **Baseline:** Long-term therapy, sustained supportive environment → years to reshape decades of programming
+
+**FUNCTIONALLY EQUIVALENT SOLUTIONS:**
+
+All of these address the SAME biological need (HPA axis recovery, prefrontal cortex protection) through different timescale interventions:
+
+- Daily 10-minute walk (immediate intervention, prevents accumulation)
+- Weekly protected recovery time (prefers chronic buildup)
+- Monthly vacation days (full system reset)
+- Yearly job flexibility negotiation (changes context long-term)
+- Coalition advocacy for workload monitoring (systemic redesign)
+
+Different timescales, different feasibility, SAME underlying coordination need.
+
+**CONNECTION TO CHAPTER 3:** This is exactly what Sapolsky's research revealed—your biology operates across nested timescales, and coordination depends on maintaining function at ALL levels. Individual "resilience" can't overcome chronic extractive context indefinitely. Biology has limits.`
                     },
+                    
                     beauty: {
-                        intro: "Beauty/Awe reveals what captures attention and motivates sustained effort. From cosmic heritage to immediate patterns, awe shapes what we notice and what drives us.",
-                        scales: ["Deep Time", "Immediate", "Aspirational"],
+                        intro: "Beauty/Awe operates across timescales—from immediate attention capture to transformative experiences to deep time perspective that shifts priority.",
+                        
+                        scales: ["Deep Time (millennia)", "Transformative (hours-months)", "Immediate (seconds)"],
+                        
                         questions: {
-                            "Deep Time": [
-                                "Consider: 13.8 billion years of cosmic evolution created the atoms in your body. Billions of years of biological evolution built your stress response system—designed to save you from predators, now triggered by emails. How does this deep time perspective change what feels 'important'?",
-                                "Your capacity to even recognize you're stressed and could choose differently is the product of countless minds and lives contributing to human knowledge. What does this inheritance mean for how you use your meta-constructor capability?",
-                                "What would ancestors who survived famines, wars, and plagues think about using this extraordinary inheritance to... meet arbitrary deadlines?"
+                            "Deep Time (millennia)": [
+                                "Consider: 13.8 billion years of cosmic evolution created the atoms in your body. 500 million years shaped your stress response system—designed to save you from predators, now triggered by emails. How does this deep time perspective change what feels 'important'?",
+                                "Your capacity to even recognize you're stressed and could choose differently is the product of countless minds and lives contributing to human knowledge. What does this extraordinary meta-constructor capability mean for how you use it?",
+                                "What would ancestors who survived famines, wars, and plagues think about using this cosmic inheritance to... meet arbitrary quarterly targets? Does deep time perspective reveal current priorities as transient cultural constructions rather than eternal necessities?"
                             ],
-                            Immediate: [
-                                "What currently captures your attention? (inbox count, Slack notifications, meeting schedule—what's salient vs. what matters)",
-                                "What should capture attention to improve outcomes? (sleep quality, HRV trends, relationship health, creative capacity)",
-                                "How could you make stress costs visible and visceral? (track HRV, log mood, measure output quality over time)"
+                            
+                            "Transformative (hours-months)": [
+                                "Johns Hopkins research: A single 6-hour psilocybin session in supportive context created personality changes (increased openness) persisting 14 months later. Participants rated it among 'top 5 most meaningful experiences of life.' Awe isn't decoration—it's biological intervention that can expand agency for months.",
+                                "What experience could shift your entire relationship to this work stress? (Not just think differently—FEEL the absurdity of destroying health for metrics) Could a 'sacred pause' (retreat, deep nature immersion, transformative art/music) cascade across weeks of integration?",
+                                "How might you design context for transformative insight rather than waiting for it to happen accidentally? Supportive setting + removal from routine + contemplative practice + integration time = conditions for perspective shift that persists."
                             ],
-                            Aspirational: [
-                                "What vision of your life could pull you toward different choices? (What future self do you want to become?)",
-                                "What collective vision could motivate systemic change? (Team operating at sustainable excellence vs. burnout churn)",
-                                "What makes sustainable excellence beautiful enough to pursue despite short-term pressure?"
+                            
+                            "Immediate (seconds)": [
+                                "What currently grabs your attention right now? (Inbox count, Slack notifications, calendar anxiety—immediate salience hijacked by systems designed to exploit your 500-million-year-old novelty detection)",
+                                "What SHOULD be immediately salient for your wellbeing? (HRV dropping, sleep debt accumulating, relationship strain visible, creative capacity declining) How could you make these visible in real-time?",
+                                "Could you create rituals that make stress costs visceral? (Morning HRV check, evening energy rating, weekly capability self-assessment) When degradation becomes immediately salient, behavior change becomes possible."
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Beauty/Awe Dimension:\n\nThe deep time lens is transformative: your stress response is a 500-million-year-old system meeting a 50-year-old environment (modern work). That's not design—it's mismatch. Recognizing this can shift what feels 'natural' or 'necessary.' Your capacity to even have this meta-awareness—to think about your thinking—is the product of billions of evolutionary innovations and millions of human lives contributing to knowledge.\n\nCurrently, the wrong things are salient (inbox count) because they're designed to capture attention (intermittent reinforcement, novelty bias). Making the right things salient requires measurement: track HRV, log energy patterns, measure decision quality. When you can see stress degrading your capacity in real-time, it becomes visceral—not abstract.\n\nAspirational awe: Graeber & Wengrow show societies chose different organizational forms based on what they found beautiful or meaningful. Your team could choose sustainable excellence over extraction—but only if that vision is compelling enough to override short-term pressure. Connection to metabolic institutions: A metabolic workplace would track and minimize allostatic load like it tracks and minimizes waste—making flourishing visible and valued."
+                        
+                        expert: `Expert ABCD Analysis - Beauty/Awe Across Timescales:
+
+Deep Time Perspective is Clarifying: Your stress system is 500 million years old, meeting a 50-year-old environment. Recognizing this mismatch is the first step in reframing what is "necessary." Why destroy cosmic inheritance for transient metrics?
+
+Transformative Intervention (Validated): Research shows that high-impact awe experiences (e.g., profound nature, art) create measurable biological reorganization that expands agency for months. This makes Awe a powerful, persistent BIOLOGICAL INTERVENTION, not just soft philosophy.
+
+Immediate Salience: The wrong things (notifications, deadlines) are salient because they are designed to exploit ancient neurological wiring. Making the RIGHT things salient (HRV, sleep quality, capability erosion) requires deliberate measurement and ritual (e.g., tracking a capability self-assessment). This shifts attention toward long-term solvency.
+
+Integration: The challenge is to match the intervention timescale to the problem. The absurdity revealed by Deep Time must be translated into actionable daily rituals that counter the immediate hijacking of attention.`
                     },
+                    
                     context: {
-                        intro: "Context examines the conditions that shape what's possible. These aren't fixed—they're designable infrastructure that expands or constrains capability.",
-                        scales: ["Personal", "Team", "Institutional"],
+                        intro: "Context operates at different speeds—from your brain state right now (milliseconds) to institutional culture (decades) to evolutionary design (millions of years). Different timescales require different interventions.",
+                        
+                        scales: ["Biological (milliseconds-hours)", "Social (hours-days)", "Institutional (months-years)", "Evolutionary (millions of years)"],
+                        
                         questions: {
-                            Personal: [
-                                "What contextual conditions affect your state? (sleep environment, commute time, exercise access, financial buffer)",
-                                "Which of these are actually designable/changeable? (move closer to work, negotiate remote days, join gym, build emergency fund)",
-                                "What timing windows matter? (when you sleep, when you do deep work, when you have difficult conversations)"
+                            "Biological (milliseconds-hours)": [
+                                "What's your neural/physiological context RIGHT NOW? (Blood glucose, cortisol, sleep debt, autonomic tone) This biological context determines what you can actually do in the next hour—willpower alone can't overcome depleted substrate.",
+                                "Could you change immediate biological context to improve capability? (Eat protein, walk 10 minutes, do breathing exercise) Sometimes 'be more patient/rational/kind' requires changing biology first.",
+                                "Timing windows: When does your biology support deep work vs. shallow tasks vs. social interaction? Circadian rhythms, ultradian cycles, and postprandial dips affect capability at hours timescale."
                             ],
-                            Team: [
-                                "What team norms create context for stress or recovery? (always-on culture vs. respect for boundaries)",
-                                "What standards could be designed? (response time expectations, meeting-free blocks, workload visibility)",
-                                "What reception networks exist for strain? (Can you actually say 'I'm overwhelmed' and get support rather than judgment?)"
+                            
+                            "Social (hours-days)": [
+                                "What meeting structures and team norms create context for the next few days? (Always-on culture vs. boundary respect, manager-led meetings vs. structured turn-taking, psychological safety vs. fear)",
+                                "Could small context changes shift outcomes? (No-meeting Fridays, hard 6pm stops, explicit workload visibility, destigmatize asking for help)",
+                                "What happens in the next week if context doesn't change? Does extraction continue, stress accumulate, capability degrade? Intervention timing matters."
                             ],
-                            Institutional: [
-                                "What institutional infrastructure creates chronic activation? (email culture, meeting proliferation, ambiguous priorities)",
-                                "What guardrails could protect capability? (hard limits on hours, mandatory rest periods, workload monitoring with intervention triggers)",
-                                "What would make this a metabolic vs. extractive context? (processing stress costs internally vs. externalizing to workers' health)"
+                            
+                            "Institutional (months-years)": [
+                                "What institutional design creates chronic activation over months? (Unrealistic deadlines, role ambiguity, always-on norms, no workload monitoring, promotion requires heroic extraction)",
+                                "What would shift this from extractive to metabolic context? (Workload limits with intervention triggers, mandatory recovery time, career advancement tied to sustainability, stress costs internalized like any other cost)",
+                                "Is reform possible, or does extractive design require exit? Sometimes the context change needed is: leave for organization aligned with biological reality."
+                            ],
+                            
+                            "Evolutionary (millions of years)": [
+                                "WHY does stress exist? 500 million years of organisms with effective acute stress responses survived better. The system worked brilliantly for its design context: brief threats, then recovery.",
+                                "Why does modern work create problems? Mismatch: System designed for acute (minutes) applied to chronic (months-years). Biology hasn't changed. Institutions changed rapidly (decades). Inevitable collision.",
+                                "Design implication: We can't redesign biology quickly. We CAN redesign institutions to match biological reality. That's what bio-compatible design means—honoring evolutionary context rather than fighting it."
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Context Dimension:\n\nLevin's research shows identical genomes produce different outcomes under different bioelectric contexts. Same principle here: you in a context of chronic activation, role ambiguity, and no control will perform and feel differently than you in a context of clear priorities, autonomy, and recovery time—same person, different context.\n\nKey insight: Context is infrastructure. The 'always-on' culture isn't natural—it's designed through meeting practices, email norms, response expectations. These are changeable. At team level, explicit norms around boundaries and workload create reception networks for strain—can people actually say they're overwhelmed without penalty?\n\nInstitutional level connects to metabolic vs. extractive: A metabolic organization would treat allostatic load like any other cost—measure it, minimize it, internalize it. Extractive organizations externalize stress to workers' personal health, relationships, and future capacity. Guardrails like hard hour limits and workload monitoring with intervention triggers are context design that protects capability. Connection to SAGE: Engaging with your stress means monitoring how context affects state and advocating for context changes—not just 'being more resilient.'"
+                        
+                        expert: `Expert ABCD Analysis - Context Across Timescales:
+
+Biological Context: Your immediate physiological state (cortisol, sleep debt) is the context for all current action. Change your biology (a walk, protein) to change your capability—same person, different context.
+
+Institutional Context (Extractive vs. Metabolic): Extractive design creates chronic stress (unrealistic deadlines, always-on culture). Metabolic design treats stress as a cost to internalize, using guardrails like workload limits and mandatory recovery time. This is designable infrastructure.
+
+Evolutionary Mismatch: The system is perfectly designed for acute stress, but catastrophic for chronic stress. Since biology can't adapt in decades, institutions must adapt to biological reality. Bio-compatible design honors this evolutionary constraint.
+
+Intervention Strategy: Match the intervention timescale to the problem timescale. Daily walks fix immediate issues; advocating for workload limits fixes institutional issues. They are functionally equivalent interventions for HPA axis recovery.`
                     },
+                    
                     dynamics: {
-                        intro: "Dynamics examines how situations evolve: feedbacks, thresholds, attractors. Understanding dynamics reveals when and how change happens.",
-                        scales: ["Individual", "Team", "System"],
+                        intro: "Dynamics examines how events cascade across timescales, where thresholds lie, and what feedback loops maintain or shift patterns.",
+                        
+                        scales: ["Acute→Chronic Threshold", "Timescale Cascades", "Feedback Loops", "Attractor Dynamics"],
+                        
                         questions: {
-                            Individual: [
-                                "What feedback loops are operating? (stress → poor sleep → worse stress; exhaustion → mistakes → more work → more exhaustion)",
-                                "What thresholds exist? (At what point does fatigue cross into burnout? When does intention to change become actual change?)",
-                                "What attractors hold you in current state? (financial need, identity as 'hard worker', fear of letting team down)"
+                            "Acute→Chronic Threshold": [
+                                "Sapolsky's key finding: Acute stress (minutes-hours) is BENEFICIAL—sharpens focus, boosts memory. Chronic stress (weeks-months) is CATASTROPHIC—damages brain, degrades capability. But where's the threshold in YOUR situation?",
+                                "Signs you've crossed into chronic territory: Sleep consistently disrupted? Recovery not happening on weekends? Baseline anxiety increasing? Can't 'turn off' anymore? These indicate threshold crossed—different intervention needed.",
+                                "Can you intervene before chronic? Daily recovery practices (walks, exercise, social connection, sleep protection) prevent accumulation. Once chronic, need context change at weeks-months timescale."
                             ],
-                            Team: [
-                                "How does team stress create positive feedback? (one person burns out → workload shifts → others burn out → cascade)",
-                                "What would shift the team attractor from 'crisis mode' to 'sustainable excellence'? (What intervention changes the basin?)",
-                                "How do norms create hysteresis? (once 'always-on' becomes normal, brief changes don't shift it—requires sustained intervention)"
+                            
+                            "Timescale Cascades": [
+                                "Trace a cascade in your situation: Stressful meeting (instant) → cortisol spike (seconds) → rumination (minutes-hours) → poor sleep (hours) → impaired next day (days) → pattern establishes (weeks) → capability degradation (months). How do events at one timescale trigger effects at others?",
+                                "Where could you interrupt the cascade? Breathing after meeting (interrupt cortisol lock-in), reframing before bed (prevent rumination), protect sleep (prevent next-day impairment), weekly recovery (prevent chronic accumulation).",
+                                "What instant events have created lasting effects? A single critical meeting 3 months ago → rumination pattern → chronic anxiety. Understanding cascades reveals why 'small' interventions at the right timescale can prevent major outcomes."
                             ],
-                            System: [
-                                "What organizational dynamics maintain extraction? (short-term metrics create pressure → stress increases → quality drops → more pressure to compensate)",
-                                "Where are leverage points for attractor change? (leadership change, economic shift, mass exit creating talent crisis)",
-                                "What would a stable 'metabolic' attractor look like? (self-reinforcing cycle of recovery → capability → performance → trust → protection of recovery)"
+                            
+                            "Feedback Loops": [
+                                "Identify reinforcing loops (amplifying): Stress → poor sleep → worse stress → worse sleep (downward spiral). Success → confidence → more success (upward spiral). Small changes amplify over time through feedback.",
+                                "Identify balancing loops (stabilizing): Organization creates stress → workers leave → hiring pressure → more stress on remaining (balancing through exodus). Or: Team supports member → capability restored → team benefits (balancing through support).",
+                                "Which loops operate at which timescales? Daily loops (stress/sleep), weekly loops (workload/capacity), monthly loops (burnout/turnover), yearly loops (institutional reputation/talent attraction)."
+                            ],
+                            
+                            "Attractor Dynamics": [
+                                "Organizations exist in stable states (attractors). High-stress extraction attractor: Stress → pressure → more stress → turnover → pressure on remaining → more stress. Self-reinforcing negative pattern. OR: High-trust collaboration attractor: Trust → cooperation → success → more trust. Self-reinforcing positive pattern.",
+                                "Which attractor is your organization in? How stable is it? (Deep basin = hard to shift; shallow = easier to change) How long has this pattern persisted? (Years = deep attractor; months = forming pattern)",
+                                "What would shift attractors? Brief interventions (workshop, new manager) won't shift deep attractors. Need sustained multi-timescale intervention: Change incentives (years), build new feedback loops (months), interrupt daily patterns (weeks), create new norms (months). Attractor shifts require matching intervention duration to attractor formation duration."
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Dynamics Dimension:\n\nYour stress isn't static—it's caught in reinforcing feedback loops. Sapolsky documents how chronic activation → hippocampal changes → worse stress regulation → more activation. This creates a stable attractor basin: without intervention, you settle into high-stress as a new set-point (hysteresis).\n\nTeam level: Burnout cascades. One person leaves → work redistributes → others burn out → more leave. This is a threshold-crossing event that can flip the whole system. Preventing cascade requires early detection and intervention—monitoring leading indicators (HRV, sleep, engagement scores) rather than lagging ones (turnover).\n\nSystem dynamics: Extractive organizations are caught in their own feedback loop: short-term metrics create pressure → quality drops → more pressure to compensate. This is a stable but pathological attractor. Shifting to metabolic requires crossing a threshold—usually triggered by crisis (talent exodus, major failure, leadership change) that makes costs visible enough to warrant redesign.\n\nConnection to Federation concepts: Bio-compatible institutions would have automatic circuit-breakers—when stress metrics cross thresholds, mandatory interventions kick in (redistribute work, enforce rest, add resources). No meeting can override physiological safety limits. This treats threshold dynamics as design constraints, not individual willpower tests."
+                        
+                        expert: `Expert ABCD Analysis - Dynamics Across Timescales:
+
+Acute vs. Chronic Threshold: The same system has opposite effects depending on duration. The key is identifying the threshold where beneficial acute stress turns into catastrophic chronic stress (e.g., persistent sleep disruption).
+
+Timescale Cascades: Single instant events (a critical meeting) can create decade-long negative trajectories (chronic anxiety, brain damage). Early interruption (breathing exercises) is the most potent intervention because it stops the cascade at its source.
+
+Attractor Dynamics (Extractive vs. Metabolic): Your organization is likely in a stable, self-reinforcing 'extractive attractor.' Shifting this pattern requires sustained, multi-timescale intervention that changes incentives (years) and builds new feedback loops (months), not just individual willpower.
+
+Federation Application: Bio-compatible design treats threshold dynamics as design constraints, building automatic circuit-breakers (mandatory rest, work redistribution) that activate when stress metrics cross the acute-to-chronic threshold, preventing the system from collapsing into the extractive attractor.`
                     }
                 }
             },
-            
+
             safety: {
                 title: "Safety Reporting System",
                 icon: "⚠️",
@@ -839,7 +998,7 @@
                         expert: "Expert ABCD Analysis - Agency Dimension:\n\nFear isn't weakness—it's a physiological state that literally narrows your capability space. Your amygdala activation, cortisol response, and risk assessment are working as designed—just in a context that punishes honest reporting. This is state-dependent agency: same you in a protected context would act differently.\n\nTeam level shows distributed capability and collective action problems. Boisjoly had engineering authority but not political capital alone. When everyone waits for someone else to act, agency is diffused to zero. Coalition formation changes the game: group reporting distributes retaliation risk and increases credibility.\n\nInstitutional level reveals extractive design: the system appears to invite reporting while actually suppressing it. Manager approval means reports can be blocked. Public names enable retaliation. 'Not team player' labeling creates social cost. This externalizes safety costs—accidents happen to individual workers rather than company internalizing prevention expenses. Metabolic design would make reporting truly protected, anonymous, and rewarded. Connection to Challenger: Boisjoly reported through proper channels repeatedly. The system captured his concerns and ignored them—his agency was symbolic only."
                     },
                     beauty: {
-                        intro: "Beauty/Awe reveals what captures attention and what should. From evolutionary cooperation to immediate harm visibility to aspirational safety culture.",
+                        intro: "Beauty/Awe grounds recovery in deep time ecological resilience and makes visible the bonds that matter most.",
                         scales: ["Deep Time", "Immediate", "Aspirational"],
                         questions: {
                             "Deep Time": [
@@ -850,7 +1009,7 @@
                             Immediate: [
                                 "What currently captures attention in your workplace? (Production metrics, deadlines, manager approval)",
                                 "What should capture attention to prevent harm? (Near-miss patterns, safety margin erosion, reporting suppression)",
-                                "How could you make potential harm visible and visceral? (Photos of near-miss, stories of past accidents, data on incident trends)"
+                                "How could you make potential harm visible and visceral? (Photos of the near-miss, stories of past accidents, data on incident trends)"
                             ],
                             Aspirational: [
                                 "What does a high-reliability organization culture look like? (Where reporting is celebrated, errors are learning, safety trumps production)",
@@ -978,7 +1137,7 @@
                                 "What would metabolic recovery infrastructure look like—internalizing resilience vs. externalizing vulnerability?"
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Context Dimension:\n\nPhysical infrastructure reveals centralized vs. distributed trade-offs. Centralized power grids are efficient but fragile (single point failure). Distributed solar + storage is resilient but expensive upfront. Resilient context requires redundancy and modularity—multiple pathways for essential services. Building codes and zoning are context design: they determine what's possible to build and where.\n\nSocial infrastructure is trust networks and mutual aid capacity. These aren't spontaneous—they're built through repeated interaction, cultural practices, and institutional support. Reception networks for those in need determine whether vulnerability is temporary or catastrophic. Crucially, context is inequitable: wealthy neighborhoods have generators, cars, second homes; poor neighborhoods lack these buffers. Same hurricane, radically different context.\n\nInstitutional context: Government creates infrastructure (evacuation routes, emergency services, communication systems) but also regulations that enable or constrain community self-organization. Metabolic design internalizes resilience costs—builds capacity before disaster rather than externalizing to emergency response. Federation concept: distributed governance with clear protocols and pre-positioned resources, not waiting for centralized response. Connection to Challenger: NASA's context (schedule pressure, budget cuts, political visibility) shaped engineering judgment. Recovery context shapes community survival."
+                        expert: "Expert ABCD Analysis - Context Dimension:\n\nPhysical infrastructure reveals centralized vs. distributed trade-offs. Centralized power grids are efficient but fragile (single point failure). Distributed solar + storage is resilient but expensive upfront. Resilient context requires redundancy and modularity—multiple pathways for essential services. Building codes and zoning are context design: they determine what's possible to build and where.\n\nSocial infrastructure is trust networks and mutual aid capacity. These aren't spontaneous—they're built through repeated interaction, cultural practices, and institutional support. Reception networks for those in need determine whether vulnerability is temporary or catastrophic. Crucially, context is inequitable: wealthy neighborhoods have generators, cars, second homes; poor neighborhoods lack these buffers. Same hurricane, radically different context.\n\nInstitutional context: Government creates infrastructure (evacuation routes, emergency services, communication systems) but also regulations that enable or constrain community self-organization. Metabolic design internalizes resilience costs—builds capacity before disaster rather than externalizing to emergency response. Federation concept: distributed governance with clear protocols and pre-positioned resources, not waiting for centralized response. Connection to metabolic design: Resilient systems internalize recovery capacity through distributed infrastructure and mutual aid, rather than externalizing vulnerability to individual 'preparedness.'"
                     },
                     dynamics: {
                         intro: "Dynamics examines how disaster recovery cycles, community cohesion feedbacks, and system transitions work.",
@@ -1000,7 +1159,7 @@
                                 "How do policy cycles interact with disaster cycles? (Brief political attention, then fade before implementation)"
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Dynamics Dimension:\n\nDisaster cycles show predictable patterns: crisis → cohesion → recovery → forgetting → vulnerability → next crisis. This is a stable but pathological attractor. Breaking it requires sustained institutional memory and ongoing investment through the low-attention period. Thresholds matter: beyond certain damage levels, communities don't recover—they dissolve (population exodus, economic collapse).\n\nCommunity cohesion dynamics: Immediate post-disaster period shows dramatic mutual aid spike (high trust, shared purpose, visible need). This fades as normalcy returns unless institutionalized into ongoing practices. Cultural narratives matter: 'resilient community' identity creates positive attractor (pride in capability, ongoing preparation). 'Victim' narrative creates learned helplessness.\n\nSystem dynamics: Repeated vulnerability comes from feedback loops: development pressure → building in flood zones → disaster → recovery subsidies → more development in flood zones. This is perverse attractor maintained by short-term incentives against long-term risk. Climate change adds external forcing—disasters increase in frequency and severity faster than adaptation.\n\nLeverage points: Usually post-disaster when costs are salient and political will exists. But window closes fast—policy attention fades before implementation. Federation concept: Standing institutions (resilience councils, mutual aid networks, resource stockpiles) with automatic triggers provide countercyclical stability. Connection to metabolic design: Internalizing resilience costs means building capacity continuously, not emergency spending after each disaster."
+                        expert: "Expert ABCD Analysis - Dynamics Dimension:\n\nDisaster cycles show predictable patterns: crisis → cohesion → recovery → forgetting → vulnerability → next crisis. This is a stable but pathological attractor. Breaking it requires sustained institutional memory and ongoing investment through the low-attention period. Thresholds matter: beyond damage levels, communities don't recover—they dissolve (population exodus, economic collapse).\n\nCommunity cohesion dynamics: Immediate post-disaster period shows dramatic mutual aid spike (high trust, shared purpose, visible need). This fades as normalcy returns unless institutionalized into ongoing practices. Cultural narratives matter: 'resilient community' identity creates positive attractor (pride in capability, ongoing preparation). 'Victim' narrative creates learned helplessness.\n\nSystem dynamics: Most organizations only shift after crisis. Challenger was NASA's threshold-crossing event—forced attractor shift from normalized deviance to safety-first culture (temporarily).\n\nFederation concept: Instead of waiting for crisis, bio-compatible design builds automatic circuit-breakers: when safety reports drop below threshold or near-misses spike, independent review triggers. Metrics force visibility before disaster. This treats dynamics as design constraint—don't rely on individual courage to overcome systemic extractive patterns."
                     }
                 }
             },
@@ -1032,7 +1191,7 @@
                                 "What would distributed coordination look like? (Many initiatives rather than single global deal)"
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Agency Dimension:\n\nClimate reveals limits of individual and national agency—no single actor can solve it alone, but all must act. National capability depends on resources, technology, and political capacity, but is constrained by fossil fuel lock-in, development pressures, and short-term political cycles. Crucially, climate stress contracts agency: disasters divert resources from prevention to response (Sapolsky's allostatic load at national scale).\n\nInternational collective action faces classic free-rider problem: each nation benefits from others' emissions cuts without bearing costs of their own. Traditional treaties rely on enforcement mechanisms that don't exist at global scale (no world government). Power asymmetries matter: wealthy nations caused historical emissions but now demand poor nations forgo fossil-fueled development—equity crisis.\n\nPolycentric governance offers alternative: cities, states, corporations, NGOs act at their scales without waiting for international agreement. This is distributed agency—not heroic global deal but functional coordination through multiple mechanisms. Graeber & Wengrow: Large-scale cooperation doesn't require centralized authority—can emerge through standards, reciprocity, reputation. Connection to Federation: Nested sovereignty with clear protocols at each scale, not waiting for top-down global consensus."
+                        expert: "Expert ABCD Analysis - Agency Dimension:\n\nClimate reveals limits of individual and national agency—no single actor can solve it alone, but all must act. National capability depends on resources, technology, and political capacity, but is constrained by fossil fuel lock-in, development needs, and short-term political cycles. Crucially, climate stress contracts agency: disasters divert resources from prevention to response (Sapolsky's allostatic load at national scale).\n\nInternational collective action faces classic free-rider problem: each nation benefits from others' emissions cuts without bearing costs of their own. Traditional treaties rely on enforcement mechanisms that don't exist at global scale (no world government). Power asymmetries matter: wealthy nations caused historical emissions but now demand poor nations forgo fossil-fueled development—equity crisis.\n\nPolycentric governance offers alternative: cities, states, corporations, NGOs act at their scales without waiting for international agreement. This is distributed agency—not heroic global deal but functional coordination through multiple mechanisms. Graeber & Wengrow: Large-scale cooperation doesn't require centralized authority—can emerge through standards, reciprocity, reputation. Connection to Federation: Nested sovereignty with clear protocols at each scale, not waiting for top-down global consensus."
                     },
                     beauty: {
                         intro: "Beauty/Awe grounds climate action in planetary deep time and makes visible what's truly at stake—across scales from geological to generational.",
@@ -1047,7 +1206,8 @@
                                 "What makes Earth's fragility visible? (Images from space, ice core data, real-time CO2 measurements, species extinction rates)",
                                 "What currently captures attention vs. what should? (GDP growth vs. ecological stability, quarterly profits vs. generational survival)",
                                 "How could planetary boundaries be made salient to decision-makers? (Visualizations, ritual observations, shared dashboards)"
-                            ],
+                            ]
+                            ,
                             Future: [
                                 "What vision of viable future could pull coordinated action? (Regenerative economies, climate-stable world for descendants)",
                                 "How do we make future generations' agency visible now? (They can't speak, vote, or negotiate—but their stakes are highest)",
@@ -1076,7 +1236,7 @@
                                 "How does uneven technological capacity create equity issues? (Developed nations have resources, developing nations have needs)"
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Context Dimension:\n\nEconomic context is fossil fuel lock-in: subsidies ($5+ trillion annually), sunk costs (pipelines, refineries, vehicles), and externalized costs (climate damage not in prices). Changing context requires carbon pricing that internalizes costs, renewable cost curves that make alternatives cheaper (already happening with solar/wind), and green finance mechanisms that redirect capital flows. Trade context matters: border carbon adjustments prevent 'carbon leakage' (moving production to low-regulation countries).\n\nInstitutional context is weak: Paris Agreement lacks enforcement, monitoring is voluntary, equity provisions are inadequate. Missing infrastructure: no mechanism to ensure wealthy nations compensate poor ones for climate damages or fund their transitions. What's needed: automatic triggers (when emissions don't decline, protocols activate), independent review (sortition panels, not political negotiation), and circuit-breakers (hard limits that can't be overridden by meetings).\n\nTechnological context: Renewable infrastructure is necessary but not sufficient—needs storage, transmission, and coordination systems. Standards matter: measurement protocols that enable verification, data sharing that makes impacts visible, interoperability that allows system integration. Equity crisis: developed nations have resources to transition; developing nations need both development and decarbonization. Technology transfer and capacity building are context design—expanding possibility space for all nations. Connection to metabolic design: Climate-stable context requires infrastructure that internalizes carbon costs at every level, not externalizing to atmosphere and future."
+                        expert: "Expert ABCD Analysis - Context Dimension:\n\nEconomic context is fossil fuel lock-in: subsidies ($5+ trillion annually), sunk costs in infrastructure, and externalized costs (climate damage not in prices). Changing context requires carbon pricing that internalizes costs, renewable cost curves that make alternatives cheaper (already happening with solar/wind), and green finance mechanisms that redirect capital flows. Trade context matters: border carbon adjustments prevent 'carbon leakage' (moving production to low-regulation countries).\n\nInstitutional context is weak: Paris Agreement lacks enforcement, monitoring is voluntary, equity provisions are inadequate. Missing infrastructure: no mechanism to ensure wealthy nations compensate poor ones for climate damages or fund their transitions. What's needed: automatic triggers (when emissions don't decline, protocols activate), independent review (sortition panels, not political negotiation), and circuit-breakers (hard limits that can't be overridden by meetings).\n\nTechnological context: Renewable infrastructure is necessary but not sufficient—needs storage, transmission, and coordination systems. Standards matter: measurement protocols that enable verification, data sharing that makes impacts visible, interoperability that allows system integration. Equity crisis: developed nations have resources to transition; developing nations need both development and decarbonization. Technology transfer and capacity building are context design—expanding possibility space for all nations. Connection to metabolic design: Climate-stable context requires infrastructure that internalizes carbon costs at every level, not externalizing to atmosphere and future."
                     },
                     dynamics: {
                         intro: "Dynamics examines feedback loops, tipping points, and attractor shifts in climate systems and human coordination.",
@@ -1098,7 +1258,7 @@
                                 "How could sustained action be maintained across political cycles? (Constitutional protections, independent institutions, automatic triggers)"
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Dynamics Dimension:\n\nClimate system has multiple reinforcing feedbacks: warming melts ice → less reflection → more warming. Permafrost thaw releases methane → more warming → more thaw. These are threshold-crossing events: once ice sheets destabilize, they don't restabilize at current temperatures (hysteresis). Multiple tipping points can cascade: Amazon forest die-off → carbon release → warming → AMOC shutdown → regional climate shift → more ecosystem collapse.\n\nEconomic dynamics maintain fossil fuel lock-in through infrastructure (sunk costs make transition expensive), political economy (industry lobbying, employment, tax revenue), and price externalities (climate damage not reflected in fossil fuel prices). Shift requires crossing threshold where renewables are cheaper AND political will exists to strand fossil assets. This is attractor change—requires coordinated action at scale to overcome inertia.\n\nPolitical dynamics are mismatched to climate timescales: 2-6 year election cycles against century-scale challenges. Free-rider problem and partisan polarization create coordination failure. Shift typically requires crisis (visible disasters) or movement pressure (youth climate strikes) making inaction politically costly. Sustaining action across political cycles requires institutional design: constitutional climate protections, independent climate authorities, automatic policy triggers that activate when emissions don't decline.\n\nConnection to Federation: Bio-compatible climate governance would have circuit-breakers—when emissions cross thresholds or tipping points approach, automatic protocols activate (carbon rationing, emergency mobilization, resource redirection). No election can override biophysical limits. This treats threshold dynamics as design constraints, embedding climate stability into governance infrastructure rather than hoping political will persists."
+                        expert: "Expert ABCD Analysis - Dynamics Dimension:\n\nClimate system has multiple reinforcing feedbacks: warming melts ice → less reflection → more warming. Permafrost thaw releases methane → more warming → more thaw. These are threshold-crossing events: once ice sheets destabilize, they don't restabilize at current temperatures (hysteresis). Multiple tipping points can cascade: Amazon forest die-off → carbon release → warming → AMOC shutdown → regional climate shift → more ecosystem collapse.\n\nEconomic dynamics maintain fossil fuel lock-in through infrastructure (sunk costs make transition expensive), political economy (industry lobbying, employment, tax revenue), and price externalities (climate damage not reflected in fossil fuel prices). Shift requires crossing threshold where renewables are cheaper AND political will exists to strand fossil assets. This is attractor change—requires coordinated action at scale to overcome inertia.\n\nPolitical dynamics are mismatched to climate timescales: 2-6 year election cycles against century-scale challenges. Free-rider problem and partisan polarization create coordination failure. Shift typically requires crisis (visible disasters) or movement pressure (youth climate strikes) making inaction politically costly. Sustaining action across political cycles requires institutional design: constitutional climate protections, independent climate authorities, automatic policy triggers that activate when emissions don't decline.\n\nConnection to Federation: Bio-compatible climate governance would have circuit-breakers—when emissions cross thresholds or tipping points approach, automatic protocols activate (carbon rationing, emergency mobilization, resource redirection). No election can override biophysical limits. This treats dynamics as design constraints, embedding climate stability into governance infrastructure rather than hoping political will persists."
                     }
                 }
             }
@@ -1115,6 +1275,7 @@
                 document.querySelectorAll('.scenario-card').forEach(card => {
                     card.classList.remove('active');
                 });
+                document.getElementById('timescale-synthesis-container').innerHTML = ''; // Clear synthesis on exit
                 return;
             }
 
@@ -1136,6 +1297,7 @@
             currentDimension = 'agency';
             initializeScales();
             renderDimension();
+            renderTimescaleSynthesis(); // Render the new synthesis section
             updateProgress();
             
             // Scroll to workspace
@@ -1144,9 +1306,14 @@
 
         function initializeScales() {
             const scenario = scenarios[currentScenario];
-            Object.keys(scenario.dimensions).forEach(dim => {
-                if (!currentScale[dim]) {
-                    currentScale[dim] = scenario.dimensions[dim].scales[0];
+            Object.keys(scenario.dimensions).forEach(dimKey => {
+                const dim = scenario.dimensions[dimKey];
+                const currentScaleValue = currentScale[dimKey];
+
+                // If no scale is set OR the currently stored scale value is not a valid key
+                // in the new scenario's questions, reset it to the first scale.
+                if (!currentScaleValue || !dim.questions.hasOwnProperty(currentScaleValue)) {
+                    currentScale[dimKey] = dim.scales[0];
                 }
             });
         }
@@ -1209,6 +1376,53 @@
             `;
             
             document.getElementById('dimension-container').innerHTML = html;
+        }
+        
+        function renderTimescaleSynthesis() {
+            // Only render for the STRESS scenario which has the full timescale data
+            if (currentScenario !== 'stress') {
+                document.getElementById('timescale-synthesis-container').innerHTML = '';
+                return;
+            }
+
+            const expertAgency = scenarios.stress.dimensions.agency.expert;
+            
+            // Extract CASCADE PATTERN and FUNCTIONALLY EQUIVALENT SOLUTIONS
+            const cascadeMatch = expertAgency.match(/\*\*THE CASCADE PATTERN:\*\*(.*?)\*\*INTERVENTION BY TIMESCALE:\*\*/s);
+            const solutionMatch = expertAgency.match(/\*\*FUNCTIONALLY EQUIVALENT SOLUTIONS:\*\*(.*?)\*\*CONNECTION TO CHAPTER 3:\*\*/s);
+
+            const cascadePattern = cascadeMatch ? cascadeMatch[1].trim() : "Analysis not available.";
+            const solutionListRaw = solutionMatch ? solutionMatch[1].trim() : "Analysis not available.";
+            
+            // Convert list items to structured array
+            const solutionList = solutionListRaw.split('\n').filter(line => line.startsWith('-')).map(line => line.trim().substring(1).trim());
+
+            let html = `
+                <div class="timescale-synthesis">
+                    <h4>Timescale Synthesis: Agency Cascade and Solvency Solutions</h4>
+
+                    <div class="pattern-box">
+                        <h5>Agency Degradation Cascade Pattern (The Debt Accumulation)</h5>
+                        <p class="text-sm text-neutral-700">${cascadePattern.replace(/\*\*/g, '')}</p>
+                        <p class="text-xs text-neutral-600 mt-2"><strong>Insight:</strong> One instant event initiates a predictable, decade-long trajectory of **Neurological Debt** accumulation, requiring intervention at the correct timescale to interrupt the cascade.</p>
+                    </div>
+
+                    <div class="pattern-box">
+                        <h5>Functionally Equivalent Structural Solutions</h5>
+                        <p class="text-sm text-neutral-700">All interventions, from daily habits to policy changes, are functionally equivalent—they target the same biological need (HPA axis recovery, PFC protection) across different timescales.</p>
+                        <div class="solution-grid">
+                            ${solutionList.map(sol => `
+                                <div class="solution-card">
+                                    ${sol.replace(/\*\*/g, '')}
+                                </div>
+                            `).join('')}
+                        </div>
+                        <p class="text-xs text-neutral-600 mt-2"><strong>Principle:</strong> Individual resilience cannot overcome chronic extractive context. The solution must be structural, matching the intervention timescale to the problem timescale.</p>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('timescale-synthesis-container').innerHTML = html;
         }
 
         function getDimensionName(dim) {
@@ -1280,7 +1494,8 @@
         }
 
         function showSynthesis() {
-            alert('Synthesis view coming in next iteration! This will show how all four dimensions interconnect for this scenario.');
+            // Now renders the synthesis in place, but keeps the old alert() for now
+            alert('Synthesis view is now integrated below the dimension tabs!');
         }
 
         function exportAnalysis() {
@@ -1304,6 +1519,23 @@
                 });
             });
             
+            // Add the final Synthesis summary for the stress scenario
+            if (currentScenario === 'stress') {
+                const expertAgency = scenarios.stress.dimensions.agency.expert;
+                const solutionMatch = expertAgency.match(/\*\*FUNCTIONALLY EQUIVALENT SOLUTIONS:\*\*(.*?)\*\*CONNECTION TO CHAPTER 3:\*\*/s);
+                const solutionListRaw = solutionMatch ? solutionMatch[1].trim() : "Analysis not available.";
+                const solutionList = solutionListRaw.split('\n').filter(line => line.startsWith('-')).map(line => line.trim().substring(1).trim());
+
+                output += `\n\n========================================\n`;
+                output += `FUNCTIONALLY EQUIVALENT SOLUTIONS (Structural Solvency)\n`;
+                output += `========================================\n`;
+                output += `The following structural interventions all address the SAME biological need (PFC/HPA axis recovery) across different timescales:\n`;
+                solutionList.forEach(sol => {
+                    output += `- ${sol.replace(/\*\*/g, '')}\n`;
+                });
+                output += `\nPrinciple: The solution must match the intervention timescale to the problem timescale.\n`;
+            }
+
             // Create download
             const blob = new Blob([output], { type: 'text/plain' });
             const url = URL.createObjectURL(blob);
