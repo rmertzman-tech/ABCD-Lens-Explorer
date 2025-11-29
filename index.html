@@ -969,153 +969,172 @@ Federation Application: Bio-compatible design treats threshold dynamics as desig
             },
 
             safety: {
-                title: "Safety Reporting System",
+                title: "Safety Reporting in High-Risk Environment",
                 icon: "⚠️",
-                scale: "Professional → Institutional",
-                description: "You work at a manufacturing company. You've noticed that the safety reporting system, while technically available, seems designed to discourage actual use. Reports require manager approval before submission, reporters' names are visible to all leadership, and there's an unspoken understanding that 'frequent reporters' are labeled as 'not team players.' You witnessed a near-miss incident that could have been serious, but your coworkers are reluctant to report it.",
+                scale: "Individual Fear → Institutional Design",
+                description: "You've discovered a significant safety hazard in your workplace. Reporting it through proper channels requires manager approval, your name is attached, and you've seen others face subtle retaliation for 'making waves.' The hazard is real, but so is the fear of consequences. Multiple timescales are at play: immediate fear (biological), social dynamics (days-weeks), institutional culture (years).",
                 
                 dimensions: {
                     agency: {
                         intro: "Agency examines who has the capability to speak up and what expands or constrains that capability. Fear is physiological—it contracts your action space.",
-                        scales: ["Personal", "Team", "Institutional"],
+                        scales: ["Immediate (fear response)", "Social (days-weeks)", "Institutional (months-years)", "Systemic (decades)"],
                         questions: {
-                            Personal: [
-                                "What is your physiological response to considering reporting? (Fear constricts capability—this is state-dependent agency)",
-                                "What would expand your capability to act? (Coalition support, financial security, documented evidence)",
-                                "What specific fears constrain your agency? (Retaliation, job loss, social isolation, career damage)"
+                            "Immediate (fear response)": [
+                                "Right now, when you think about reporting the hazard, what's your physiological response? (Heart rate increases, stomach tightens, breathing shallows) This is your amygdala detecting social threat and activating stress response. Fear isn't weakness—it's appropriate response to real risk.",
+                                "Your 500-million-year-old threat detection system can't distinguish between 'predator' and 'career consequences.' Both trigger same biological cascade. This is state-dependent agency: fear physiologically CONTRACTS your capability to act, even when you know rationally what you should do.",
+                                "Could you change your immediate state to expand agency? (Deep breathing to calm amygdala, social support to buffer fear, delay decision until calmer) Sometimes ethical action requires first managing biological state."
                             ],
-                            Team: [
-                                "How does collective silence reinforce individual fear? (Everyone waiting for someone else to act)",
-                                "What coalition structures could distribute risk? (Group reporting, union representation, external advocacy)",
-                                "Who has protected capability to speak? (Senior employees, those with other job options, those with legal protections)"
+                            "Social (days-weeks)": [
+                                "Over the past weeks, what have you observed about how safety concerns are handled? Pattern of retaliation? Support for whistleblowers? This social learning creates expectations that affect your agency now.",
+                                "Could you build a coalition? Multiple people reporting together distributes risk, makes retaliation harder, provides social support that buffers individual fear. Coalition-building is agency expansion at social timescale.",
+                                "What are the realistic consequences over the next weeks-months if you report? If you don't report and someone gets hurt? Agency requires clear-eyed assessment of actual risks, not just fear response."
                             ],
-                            Institutional: [
-                                "How does the reporting system design suppress agency? (Manager approval, public names, labeling)",
-                                "What institutional protections would expand capability to report? (Anonymous channels, external review, anti-retaliation enforcement)",
-                                "How does extractive design externalize safety costs? (Accidents borne by workers rather than company absorbing prevention costs)"
+                            "Institutional (months-years)": [
+                                "What's the institutional context for safety reporting? Anonymous channels available? External oversight? Anti-retaliation protections? Or: manager approval required, names public, history of punishment? Context design determines whether agency to report exists.",
+                                "Your individual capability to act is constrained by institutional design that either protects or punishes voice. This isn't individual moral failing—it's context systematically suppressing agency. What would need to change institutionally to make reporting safe?",
+                                "Long-term: If institution systematically suppresses safety concerns, is internal reform possible or does this require external intervention (regulators, unions, media, exit)? Some contexts can't be fixed from within."
+                            ],
+                            "Systemic (decades)": [
+                                "Why do high-risk industries often punish safety reporting? Decades of prioritizing production over safety, metrics over wellbeing, short-term profits over long-term sustainability. Culture formed over years through what's rewarded and punished.",
+                                "Challenger disaster (1986): Engineers had agency to know about O-ring problems. Engineers did NOT have agency to stop the launch—institutional hierarchy, schedule pressure, normalization of deviance. Individual ethical clarity wasn't enough when system was designed to suppress voice.",
+                                "What would bio-compatible safety design look like? Anonymous reporting, external review boards, anti-retaliation enforcement, promotion tied to safety outcomes (not just production). Design that expands rather than contracts agency to speak up."
                             ]
                         },
                         expert: "Expert ABCD Analysis - Agency Dimension:\n\nFear isn't weakness—it's a physiological state that literally narrows your capability space. Your amygdala activation, cortisol response, and risk assessment are working as designed—just in a context that punishes honest reporting. This is state-dependent agency: same you in a protected context would act differently.\n\nTeam level shows distributed capability and collective action problems. Boisjoly had engineering authority but not political capital alone. When everyone waits for someone else to act, agency is diffused to zero. Coalition formation changes the game: group reporting distributes retaliation risk and increases credibility.\n\nInstitutional level reveals extractive design: the system appears to invite reporting while actually suppressing it. Manager approval means reports can be blocked. Public names enable retaliation. 'Not team player' labeling creates social cost. This externalizes safety costs—accidents happen to individual workers rather than company internalizing prevention expenses. Metabolic design would make reporting truly protected, anonymous, and rewarded. Connection to Challenger: Boisjoly reported through proper channels repeatedly. The system captured his concerns and ignored them—his agency was symbolic only."
                     },
                     beauty: {
                         intro: "Beauty/Awe grounds recovery in deep time ecological resilience and makes visible the bonds that matter most.",
-                        scales: ["Deep Time", "Immediate", "Aspirational"],
+                        scales: ["Immediate Salience", "Historical Evidence", "Aspirational Vision"],
                         questions: {
-                            "Deep Time": [
-                                "Human cooperation evolved through costly signaling and reciprocal altruism over millions of years. Honest warning calls saved countless lives. What does this evolutionary heritage mean for safety reporting?",
-                                "Consider: every safety protocol you have exists because someone, somewhere, died or was maimed. Their sacrifice is encoded in rules you follow. What responsibility does this inheritance create?",
-                                "Your capacity to recognize danger and warn others is the product of deep evolutionary selection. Using it despite social cost honors that inheritance. What does this perspective add?"
+                            "Immediate Salience": [
+                                "What's currently most salient in your workplace? Production metrics? Deadline pressure? Visible busyness? These capture immediate attention because they're measured, tracked, rewarded. Safety is often invisible until failure.",
+                                "How could safety be made immediately salient? Visible near-miss tracking? Daily safety check-ins? Lead indicators (hazards identified, concerns raised) vs. lag indicators (injuries that already happened)? What's measured becomes salient.",
+                                "Your attention naturally goes to what's rewarded and what creates fear. If safety reporting creates fear (retaliation) and production creates reward (promotion), your evolved attention systems will make wrong things salient. This requires redesign, not individual willpower."
                             ],
-                            Immediate: [
-                                "What currently captures attention in your workplace? (Production metrics, deadlines, manager approval)",
-                                "What should capture attention to prevent harm? (Near-miss patterns, safety margin erosion, reporting suppression)",
-                                "How could you make potential harm visible and visceral? (Photos of the near-miss, stories of past accidents, data on incident trends)"
+                            "Historical Evidence": [
+                                "Deep time: Every safety protocol exists because someone died. OSHA regulations written in blood. Your capacity to even recognize this hazard is built on generations of hard-won knowledge. What responsibility does that heritage create?",
+                                "Challenger disaster memorial: Seven people died because institutional dynamics suppressed engineer warnings. Roger Boisjoly (engineer who warned about O-rings) lived with that weight his whole life. Making this visible—names, faces, families—makes safety viscerally salient.",
+                                "Your workplace exists in history of safety evolution: early industrial revolution (no protections, frequent death), labor movement (fought for basic safety), modern regulations (still insufficient). You're part of ongoing coordination across generations. Does this shift what feels important?"
                             ],
-                            Aspirational: [
-                                "What does a high-reliability organization culture look like? (Where reporting is celebrated, errors are learning, safety trumps production)",
-                                "What would make safety excellence beautiful enough to pursue? (Pride in zero-harm record, team protection ethic, craftsmanship standards)",
-                                "What vision could pull your organization toward metabolic rather than extractive safety?"
+                            "Aspirational Vision": [
+                                "What would 'high-reliability organization' culture look like? Where safety concerns are welcomed, reporters are protected, near-misses are learning opportunities, production never overrides safety. This exists in some industries (nuclear, aviation)—it's possible.",
+                                "Vision of metabolic safety culture: Everyone has agency to stop unsafe work without penalty. Reporting is celebrated (caught hazard before harm). Systems designed to surface concerns early. Safety integrated into every decision, not competing with production. What would motivate sustained effort toward this?",
+                                "For future workers: The culture you help create now determines whether next generation can speak up safely. Aspirational pull isn't just 'we should do better'—it's 'we're building coordination capacity for those who come after.' Does this create motivation?"
                             ]
                         },
                         expert: "Expert ABCD Analysis - Beauty/Awe Dimension:\n\nEvolutionary perspective: Humans evolved in small groups where honest warning signals had direct survival value. Your stress response when considering reporting is calibrated for immediate social cost (ostracism from the tribe), not modern institutional retaliation. The system exploits this ancient wiring—social punishment for costly signaling—even though organizational 'death' isn't literal death.\n\nCurrently, the wrong things are salient: production numbers visible on dashboards, safety incidents hidden in manager-filtered reports. Making harm visible changes salience: photos of the near-miss, testimony from injured workers, transparent incident data. When costs are visceral rather than abstract, attention shifts.\n\nAspirational awe: High-reliability organizations (aircraft carriers, nuclear plants) create cultures where reporting is heroic, not treasonous. They make safety margins salient, celebrate catching errors early, and treat near-misses as gifts of information. This requires making excellence beautiful—craftsmanship pride, zero-harm records, team protection ethos. Connection to Challenger: NASA had once been a high-reliability culture. Budget pressure and normalization of deviance eroded it. Boisjoly's warnings should have been beautiful signals of diligence—instead they were political nuisances."
                     },
                     context: {
                         intro: "Context examines the conditions—especially designable infrastructure—that shape what's possible. Safety reporting infrastructure is context design.",
-                        scales: ["Personal", "Team", "Institutional"],
+                        scales: ["Biological (fear state)", "Organizational (reporting systems)", "Industry Culture", "Regulatory/Legal"],
                         questions: {
-                            Personal: [
-                                "What contextual conditions affect your willingness to report? (Job security, savings, alternative employment options, family obligations)",
-                                "Which conditions are actually changeable? (Build emergency fund, network for job options, document everything)",
-                                "What timing matters? (When to report—immediately vs. after building coalition, before vs. after incident)"
+                            "Biological (fear state)": [
+                                "Your current fear state is biological context affecting capability to act. High cortisol → threat-focused attention, reduced prefrontal function, stronger fear memories. This isn't context you can change by thinking differently—it requires managing physiological state.",
+                                "Could biological context be shifted to support action? Social support (coalition) buffers fear physiologically. Time delay (don't decide while activated) allows cortisol to drop. Reframing (from 'I'm in danger' to 'This is wrong and I can address it') can shift autonomic tone. Biology matters for ethical action."
                             ],
-                            Team: [
-                                "What team norms create context for silence vs. speaking up? (How are past reporters treated? What stories circulate?)",
-                                "What standards could be designed? (Anonymous reporting norm, collective reports, external ombudsman)",
-                                "What reception networks exist? (Can you actually tell someone 'I'm afraid to report' and get protection vs. punishment?)"
+                            "Organizational (reporting systems)": [
+                                "What's the actual reporting infrastructure? Anonymous hotline with external review? Or: manager approval required, your name attached, no anti-retaliation protection? System design determines whether reporting is functionally possible.",
+                                "HYBRID ANALYSIS: What's fixed vs. designable? Fixed (for now): Company-wide reporting policy. Locally designable: How your team handles concerns (can create informal safe channels). Coalitionally designable: Advocate for better system with peers/union.",
+                                "If system is extractively designed to suppress voice, individual reporting through that system is high-risk/low-effectiveness. Functionally equivalent alternatives: External regulator, media, documentation for legal protection. Different context pathway to same goal."
                             ],
-                            Institutional: [
-                                "What infrastructure enables vs. blocks honest reporting? (Anonymous channels, external review, whistleblower protections)",
-                                "What would metabolic vs. extractive reporting infrastructure look like? (Internalizing safety costs vs. externalizing to workers)",
-                                "What guardrails protect reporters? (Anti-retaliation enforcement, sortition panel review, legal protections with teeth)"
+                            "Industry Culture": [
+                                "What industry are you in? Some have stronger safety cultures (aviation, nuclear) due to high-consequence history. Others prioritize production over safety (construction, manufacturing often). Industry culture is context operating at decades timescale—hard to change quickly but possible.",
+                                "How was current culture formed? Through what's rewarded (meeting deadlines vs. stopping unsafe work), what's punished (speaking up vs. going along), what stories are told (heroes who pushed through vs. those who protected safety). Culture is accumulated pattern over years of choices.",
+                                "Is cultural change possible from within, or does it require external forcing (regulation, litigation, media exposure)? Some cultures have reformed after disasters (NASA after Challenger, Columbia). Others remain extractive until forced. Strategic assessment needed."
+                            ],
+                            "Regulatory/Legal": [
+                                "What legal protections exist? OSHA regulations? Whistleblower protections? Union representation? Or at-will employment with no protections? Legal context determines what institutional power you have.",
+                                "Regulatory context evolved over decades through tragedies: Triangle Shirtwaist (1911) → workplace safety laws. Mine disasters → coal safety regulations. Each protection written in blood. You're operating in evolved regulatory landscape—neither perfect nor static.",
+                                "If current protections insufficient, advocacy to strengthen them is intervention at regulatory timescale (years-decades of political work). Meanwhile, work within existing protections while pushing to expand them."
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Context Dimension:\n\nYour reporting system is designed context that contracts capability. Manager approval, public names, and 'not team player' labeling aren't neutral infrastructure—they're extraction mechanisms that externalize safety costs to workers while protecting management from accountability. This is designable.\n\nMetabolic context would look like: truly anonymous reporting channels, external safety review boards, anti-retaliation enforcement with real consequences, celebration of reporters as heroes. Federation concept: sortition panels—randomly selected workers who review safety reports independent of management—create accountability without requiring individual heroism.\n\nKey insight: Context creates different possibility spaces. Same you in different contexts acts differently—not because you're braver but because infrastructure enables it. Aviation industry learned this through disasters: now reporting is protected, encouraged, aggregated for pattern detection. That's designable infrastructure, not individual virtue.\n\nConnection to Challenger: Morton Thiokol's context was extractive—engineering concerns filtered through management decision-making, with engineers lacking veto power over launch decisions. Boisjoly's capability to prevent disaster was constrained by context design. After Challenger, NASA redesigned context: engineers gained direct escalation paths. That's context as designable infrastructure."
+                        expert: "Expert ABCD Analysis - Context Dimension:\n\nYour fear is biological context—cortisol elevation affecting prefrontal function, making ethical action neurologically harder. This isn't weakness—it's physiology. Social support (coalition) buffers fear biologically through oxytocin release, creating different hormonal context that enables action. Biology matters for ethical action.\n\nOrganizational context (critical layer): Your company's reporting system is infrastructure that expands or contracts agency. Extractive design: manager approval (conflict of interest), public names (enables retaliation), no external oversight (no accountability). This systematically suppresses voice regardless of individual courage.\n\nHYBRID REALITY: Even in extractive organizations, metabolic pockets may exist. Strategic: find or create these pockets while working to expand them. Some contexts can't be fixed from within—need exit or external pressure.\n\nFunctionally equivalent pathways based on context: If internal system has integrity: Use it. If internal system is extractive: External pathways (regulators, media, legal documentation). Coalition strategy: Multiple reporters harder to suppress, distributes risk, creates social support.\n\nIndustry culture context: Aviation, nuclear power developed stronger safety cultures after disasters. Your industry is somewhere on its own evolution curve. Where? What would move it forward without requiring disaster to force change?\n\nRegulatory evolution: Every protection exists because someone fought for it, often after tragedy. You're operating in evolved regulatory landscape—neither perfect nor static. Advocacy to strengthen them is intervention at regulatory timescale (years-decades of political work)."
                     },
                     dynamics: {
-                        intro: "Dynamics examines feedback loops, thresholds, and attractors. Safety culture is a system attractor—hard to shift but powerful when changed.",
-                        scales: ["Individual", "Team", "System"],
+                        intro: "Dynamics in safety contexts reveal how silence creates self-reinforcing feedback loops, how threshold events (disasters) shift cultures, and how normalized deviance develops over time. Understanding these patterns reveals intervention points.",
+                        scales: ["Silence Feedback Loop", "Normalization of Deviance", "Crisis-Driven Change", "Cultural Evolution"],
                         questions: {
-                            Individual: [
-                                "What feedback loops keep you silent? (Silence → no retaliation → continued silence vs. speak → punishment → silence)",
-                                "What threshold would trigger you to report despite fear? (Imminent serious injury, someone else injured, legal requirement)",
-                                "What attractors hold current behavior? (Need for income, social belonging, identity as 'not a troublemaker')"
+                            "Silence Feedback Loop": [
+                                "The silence spiral: Person sees hazard → fears retaliation → doesn't report → others see silence as norm → less likely to report → pattern reinforces. Each iteration makes silence stronger. How do you break this loop?",
+                                "Feedback operates at multiple timescales: Daily (see hazard, don't report), weekly (observe others' silence), monthly (pattern establishes as norm), years (becomes 'how we do things'). Intervention needs to interrupt at multiple points simultaneously.",
+                                "What would create positive feedback instead? First reporter protected → others see safety → more reporting → culture shifts → reporting becomes normal. But requires initial protection to start the cascade. This is why institutional anti-retaliation enforcement matters—it enables the positive loop."
                             ],
-                            Team: [
-                                "How does team silence create reinforcing feedback? (No one reports → norm solidifies → harder for anyone to report)",
-                                "What would shift the team attractor from silence to safety? (Critical mass of reporters, leadership change, external pressure)",
-                                "How do stories create hysteresis? (Once 'don't report' becomes culture, brief interventions don't shift it)"
+                            "Normalization of Deviance": [
+                                "Normalization of deviance: Small safety violations → no immediate consequence → repeat → becomes 'normal' → larger violations → still no consequence → threshold keeps moving until disaster. Challenger O-rings launched cold multiple times before catastrophic failure. Each success made next violation seem acceptable.",
+                                "How does this develop over time? Weeks: small violation, no harm. Months: pattern of violation, still no harm. Years: violation is standard practice. Decades: organizational memory lost that it was ever violation. Timescale of normalization reveals intervention windows—early is easier than late.",
+                                "What interrupts normalization? Usually disaster (catastrophic threshold crossing). But could be: systematic near-miss tracking, external oversight, cultural commitment to safety-first. Intervention before disaster requires making invisible risks visible."
                             ],
-                            System: [
-                                "What organizational dynamics maintain suppression? (Production pressure → cutting corners → near-misses → suppression → more risk)",
-                                "Where are leverage points for attractor change? (Usually crisis—serious accident, regulatory intervention, public scandal)",
-                                "What would a stable 'safety-first' attractor look like? (Self-reinforcing: reporting → correction → fewer incidents → trust → more reporting)"
+                            "Crisis-Driven Change": [
+                                "Major disasters often create brief windows for cultural change: Challenger → Rogers Commission → NASA reforms (though later Columbia showed some patterns returned). Triangle Shirtwaist → workplace safety laws. Crisis makes costs undeniable, creates political will for change.",
+                                "But crisis-driven change is REACTIVE (after people died) not PROACTIVE (preventing death). And changes may not stick without sustained effort—NASA's safety culture degraded again between Challenger and Columbia. Crisis opens window, but cultural change requires years of sustained reinforcement.",
+                                "Can change happen without disaster? Some organizations achieve this through: leadership commitment, systematic learning from near-misses, external accountability, cultural emphasis on psychological safety. Harder than crisis-driven (no forcing event) but more sustainable and doesn't require tragedy."
+                            ],
+                            "Cultural Evolution": [
+                                "Safety culture evolves over decades through accumulated choices: What's rewarded (meeting deadlines vs. stopping unsafe work)? What's punished (speaking up vs. going along)? What stories are told (heroes who pushed through vs. those who protected others)? Culture is sediment of years of decisions.",
+                                "Your choice about reporting contributes to cultural evolution—either reinforcing silence norm or beginning to shift it. Single action may feel small, but cultures change through accumulation of individual choices that become collective patterns.",
+                                "Long-term view: Aviation and nuclear power developed strong safety cultures over 50+ years of learning from disasters and near-misses. Your industry is somewhere on its own evolution curve. Where? And what would move it forward without requiring disaster to force change?"
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Dynamics Dimension:\n\nSafety culture is an attractor basin. Your organization is stuck in 'suppress reporting' attractor: production pressure → corner-cutting → near-misses → report suppression → normalized deviance → more risk. This is self-reinforcing. Breaking it requires crossing a threshold—usually a crisis that makes costs undeniable.\n\nIndividual dynamics: Fear feedback loops are stable. First time you stay silent because of fear, second time is easier—you've established a pattern. Threshold question: what would force you to report despite consequences? Usually imminent serious harm or legal obligation. That's your tipping point.\n\nTeam dynamics: Collective silence reinforces itself. If everyone waits for someone else, norm solidifies. Shift requires critical mass or leadership modeling. Once shifted, new norm creates hysteresis—reporting becomes normal and persists. System dynamics: Most organizations only shift after crisis. Challenger was NASA's threshold-crossing event—forced attractor shift from normalized deviance to safety-first culture (temporarily).\n\nFederation concept: Instead of waiting for crisis, bio-compatible design builds automatic circuit-breakers: when safety reports drop below threshold or near-misses spike, independent review triggers. Metrics force visibility before disaster. This treats dynamics as design constraint—don't rely on individual courage to overcome systemic extractive patterns."
+                        expert: "Expert ABCD Analysis - Dynamics Dimension:\n\nSilence feedback loop: Person sees hazard → fears retaliation → doesn't report → others see silence as norm → pattern reinforces. Breaking requires intervention at multiple points simultaneously.\n\nNormalization of Deviance: Small safety violations → no immediate consequence → repeat → becomes 'normal' → threshold keeps moving until disaster. Intervention before disaster requires making invisible risks visible.\n\nCrisis-Driven Change: Major disasters create brief windows for cultural change (reactive) but change may not stick without sustained effort (years).\n\nFederation concept: Bio-compatible design builds automatic circuit-breakers: when safety reports drop below threshold or near-misses spike, independent review triggers. Metrics force visibility before disaster. This treats dynamics as design constraint—don't rely on individual courage to overcome systemic extractive patterns."
                     }
                 }
             },
 
             community: {
-                title: "Community Recovery Design",
+                title: "Community Resilience and Disaster Recovery",
                 icon: "🏘️",
-                scale: "Community → Political",
+                scale: "Individual → Community → Political",
                 description: "Your coastal community is redesigning disaster recovery systems after a hurricane revealed major gaps. Individual preparedness varies widely, mutual aid networks are informal and patchy, and government response was slow and inequitable. The recovery design committee is deciding: should they focus on individual responsibility (encourage personal stockpiles), institutional support (government-provided resources), or distributed resilience (community-based mutual aid networks)?",
                 
                 dimensions: {
                     agency: {
                         intro: "Agency examines capability to respond and recover at multiple nested scales—individual, community, governmental.",
-                        scales: ["Individual", "Community", "Governmental"],
+                        scales: ["Individual (immediate)", "Social Networks (days-weeks)", "Community Organization (months)", "Political/Institutional (years)"],
                         questions: {
-                            Individual: [
-                                "What expands individual capability to prepare and respond? (Resources, knowledge, social networks, time, health)",
-                                "What constrains it? (Poverty, disability, isolation, information access, competing demands)",
-                                "How does individual agency depend on collective infrastructure? (Can't prepare if food/water supply chains break)"
+                            "Individual (immediate)": [
+                                "In immediate disaster: Do you have capability to evacuate? (Transportation, resources, health, information access) Individual agency depends on resources accumulated over years but tested in hours.",
+                                "Your agency right now is shaped by history: Savings buffer? Social connections? Health status? Skills? These were built over years but determine capability when disaster strikes in hours. This is why resilience can't be individual responsibility alone—it requires sustained context support.",
+                                "Immediate response capability varies by baseline resources. Person with car, savings, and support network has different evacuation agency than person without. This isn't moral difference—it's resource/context difference creating capability inequality."
                             ],
-                            Community: [
-                                "What enables community-level agency? (Trust networks, shared resources, coordination capacity, local knowledge)",
-                                "How do strong vs. weak ties function in crisis? (Neighbors for immediate help, wider networks for resources)",
-                                "What institutional forms enable collective action? (Mutual aid groups, neighborhood councils, volunteer organizations)"
+                            "Social Networks (days-weeks)": [
+                                "Post-disaster: Strong vs. weak ties matter differently. Strong ties (close friends/family) provide emotional support. Weak ties (acquaintances, distant connections) provide information and resource access. Both essential for recovery, operating at different timescales.",
+                                "Can community self-organize for mutual aid? Informal networks distributing food, coordinating shelter, checking on elderly? This is emergent collective agency—not planned by authority but arising from social connections built over years, activated in days.",
+                                "What expands collective agency? Social trust (built over years), organizational capacity (churches, community groups, existing structures), clear communication (who needs what, who can provide). These are designable at community timescale (months-years of building) tested at crisis timescale (hours-days of response)."
                             ],
-                            Governmental: [
-                                "What is government's proper role in expanding vs. constraining community capability?",
-                                "How do top-down vs. distributed responses differ in effectiveness and resilience?",
-                                "What policies expand community agency vs. creating dependency or fragility?"
+                            "Community Organization (months)": [
+                                "Medium-term recovery (weeks-months): Can community sustain organization after immediate crisis? Or does coordination collapse as attention fades? Sustained collective agency requires more than heroic crisis response—needs ongoing structure.",
+                                "Coalition-building for long-term resilience: Multiple community groups coordinating on infrastructure, policy advocacy, resource distribution. This operates at months-years timescale, requires sustained effort beyond crisis attention.",
+                                "Community agency to advocate for policy change: Federal disaster funding, building codes, infrastructure investment. Collective voice to political system. This is agency at community-to-political scale, requiring sustained coalition over years."
+                            ],
+                            "Political/Institutional (years)": [
+                                "Governmental agency to build resilience infrastructure: Updated building codes, flood barriers, emergency systems, resource stockpiles. Operates at years-decades timescale through budget cycles, political processes, infrastructure construction.",
+                                "Policy agency: Can community influence planning decisions, resource allocation, building codes? Or are decisions made without local input? Political agency determines whether community knowledge informs institutional design.",
+                                "Long-term: Climate change will increase disaster frequency. Agency at decades timescale requires political systems that can coordinate across that timeframe—but elections operate at 2-4 year cycles. Temporal mismatch between political timescales and climate/infrastructure timescales creates coordination failure. What would align these?"
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Agency Dimension:\n\nDisaster reveals nested agency. Individual capability depends on physiological state (chronic stress, health), resources (savings, supplies), and social capital (who helps you). But individual agency alone is insufficient—you can't stockpile a functioning electrical grid or water treatment plant.\n\nCommunity-level agency emerges from trust networks and coordination capacity. Graeber & Wengrow show communities historically chose different governance forms based on needs and values. Mutual aid networks are distributed agency—not heroic individuals but functional cooperation that expands everyone's capability. Strong ties (immediate neighbors) provide concrete help; weak ties (broader networks) provide resource access and information.\n\nGovernmental role is expanding capability infrastructure, not replacing community agency. Top-down response is slow and inflexible; distributed response is fast but requires pre-existing networks. Federation concept: government provides standards, resources, and backstop; communities build actual resilience through networks and local knowledge. Connection to metabolic design: Resilient systems internalize recovery capacity rather than externalizing vulnerability to individual 'personal responsibility.'"
+                        expert: "Expert ABCD Analysis - Agency Dimension:\n\nIndividual agency is state and resource dependent. Resilience can't be individual responsibility alone—it requires sustained context support.\n\nSocial network agency: Strong ties (emotional support); weak ties (resource access). Both essential for recovery, operating at different timescales.\n\nEmergent collective agency: Disasters reveal spontaneous mutual aid using social networks built over years, activated in hours. Sustained resilience requires moving from heroic crisis response to ongoing organizational structure built over months-years.\n\nPolitical agency: Government provides infrastructure and backstop, but political cycles (2-4 years) mismatch resilience timescales (decades-centuries). Coordination failure built into temporal structure. Federation concept: distributed governance with clear protocols and pre-positioned resources, not waiting for centralized response."
                     },
                     beauty: {
                         intro: "Beauty/Awe grounds recovery in deep time ecological resilience and makes visible the bonds that matter most.",
-                        scales: ["Deep Time", "Immediate", "Aspirational"],
+                        scales: ["Immediate Visibility", "Ecological Deep Time", "Aspirational Vision"],
                         questions: {
-                            "Deep Time": [
-                                "Ecosystems have survived mass extinctions through redundancy and adaptation over geological time. What does deep resilience teach about community design?",
-                                "Human communities endured ice ages, plagues, and civilizational collapse through cooperation and distributed knowledge. What inheritance does this provide?",
-                                "Consider the 13.8 billion year journey that created the conditions for human community. How does this perspective inform recovery priorities?"
+                            "Immediate Visibility": [
+                                "Disasters make invisible things visible: Mutual aid networks appear, neighbor helping neighbor, strangers coordinating. Cooperation becomes immediately salient in crisis. Crisis strips away usual social masks, reveals underlying cooperative capacity.",
+                                "What becomes visible in disaster that's invisible in normal times? Vulnerability (who lacks resources), interdependence (we need each other), community bonds (connections matter). Crisis makes fundamental human cooperation salient.",
+                                "Normalcy bias problem: Before disaster, risks aren't salient. 'It won't happen here.' How do you make future risk salient enough to motivate present action without requiring disaster to force attention?"
                             ],
-                            Immediate: [
-                                "What becomes visible in disaster that's hidden in normal times? (Community bonds, essential workers, supply chain fragility)",
-                                "What currently captures attention vs. what should? (Property values vs. social cohesion, short-term cost vs. long-term resilience)",
-                                "How could you make community bonds and mutual aid visible and valued in non-crisis times?"
+                            "Ecological Deep Time": [
+                                "Ecosystems achieve resilience through redundancy, modularity, distributed networks over geological timescales. Forests recover from fire through seed banks, regrowth, succession over decades to centuries. What does biological resilience teach about community resilience?",
+                                "Your coastal area has survived hurricanes for thousands of years—through ecosystem absorption (wetlands, mangroves, natural barriers) built over geological time. Modern development often destroys these systems for short-term gain. Deep time perspective reveals: natural resilience infrastructure took millennia to build, decades to destroy.",
+                                "13.8 billion year journey creating conditions for human community on this coastline. Perspective: Will your choices protect or degrade capacity for future generations to inhabit this place? Does deep time shift priority from property values (decades) to ecological integrity (millennia)?"
                             ],
-                            Aspirational: [
-                                "What does an antifragile community look like—one that strengthens under stress?",
-                                "What vision of collective resilience could inspire sustained effort? (Neighborhood cohesion, shared abundance, mutual care)",
-                                "What would make resilient interdependence beautiful enough to build?"
+                            "Aspirational Vision": [
+                                "Vision of antifragile community: Not just bouncing back to previous state (resilience), but using disaster to build better (antifragility). What would community look like that becomes STRONGER through crisis rather than merely recovering?",
+                                "Metabolic community design: Processes own costs (doesn't externalize to vulnerable), builds capacity proactively (not reactively), maintains ongoing preparedness (not just crisis response), creates multiple pathways to recovery (distributed not centralized).",
+                                "For future residents: The resilience infrastructure you build now determines whether next generation can weather coming climate impacts. Aspirational pull isn't just 'protect ourselves'—it's 'build inheritance of safety for those who come after.' Does this create motivation?"
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Beauty/Awe Dimension:\n\nDeep time reveals ecosystems survive through redundancy, modularity, and adaptation—not individual robustness but system resilience. Coral reefs, forests, and wetlands show how distributed, networked systems persist through catastrophes that would destroy centralized ones. This is pedagogical—it teaches what resilience actually looks like.\n\nDisaster makes visible what market society obscures: essential workers, supply chains, community bonds, mutual aid networks. What seemed optional becomes obviously crucial. Currently, property values and individual assets capture attention; community cohesion and mutual capacity should be salient for actual resilience.\n\nAspirational: Antifragile communities don't just recover—they improve through stress. This requires distributed capacity, trust networks, and institutional forms that expand during crisis rather than contract. Making this vision beautiful and compelling pulls effort toward it. Graeber & Wengrow: communities built massive public works (Poverty Point, Indus cities) without hierarchical control when collective vision was compelling. Connection to metabolic institutions: Resilient communities internalize recovery capacity through distributed infrastructure and mutual aid, rather than externalizing vulnerability to individual 'preparedness.'"
+                        expert: "Expert ABCD Analysis - Beauty/Awe Dimension:\n\nDisaster visibility paradox: Crises make cooperation immediately salient, but normalcy makes risks invisible. Challenge: make resilience salient BEFORE disaster forces attention.\n\nEcological deep time: Ecosystems teach resilience through redundancy, modularity, distributed networks. Natural resilience infrastructure took millennia to build, decades to destroy. Priority shift: from property values (decades) to ecological integrity (millennia).\n\nAspirational vision: Antifragile community uses crisis to build better. Metabolic community internalizes recovery capacity proactively. Aspirational pull: building an inheritance of safety for future generations."
                     },
                     context: {
                         intro: "Context examines the infrastructure—physical, social, institutional—that shapes resilience. Recovery is context design.",
@@ -1137,7 +1156,7 @@ Federation Application: Bio-compatible design treats threshold dynamics as desig
                                 "What would metabolic recovery infrastructure look like—internalizing resilience vs. externalizing vulnerability?"
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Context Dimension:\n\nPhysical infrastructure reveals centralized vs. distributed trade-offs. Centralized power grids are efficient but fragile (single point failure). Distributed solar + storage is resilient but expensive upfront. Resilient context requires redundancy and modularity—multiple pathways for essential services. Building codes and zoning are context design: they determine what's possible to build and where.\n\nSocial infrastructure is trust networks and mutual aid capacity. These aren't spontaneous—they're built through repeated interaction, cultural practices, and institutional support. Reception networks for those in need determine whether vulnerability is temporary or catastrophic. Crucially, context is inequitable: wealthy neighborhoods have generators, cars, second homes; poor neighborhoods lack these buffers. Same hurricane, radically different context.\n\nInstitutional context: Government creates infrastructure (evacuation routes, emergency services, communication systems) but also regulations that enable or constrain community self-organization. Metabolic design internalizes resilience costs—builds capacity before disaster rather than externalizing to emergency response. Federation concept: distributed governance with clear protocols and pre-positioned resources, not waiting for centralized response. Connection to metabolic design: Resilient systems internalize recovery capacity through distributed infrastructure and mutual aid, rather than externalizing vulnerability to individual 'preparedness.'"
+                        expert: "Expert ABCD Analysis - Context Dimension:\n\nPhysical infrastructure: Centralized vs. distributed trade-offs. Resilient context requires redundancy and modularity—multiple pathways for essential services.\n\nSocial infrastructure: Trust networks, mutual aid capacity. Built over years, tested in hours. Locally designable through sustained community organizing.\n\nInstitutional context: Government creates infrastructure (evacuation routes, emergency services) but also regulations that enable or constrain community self-organization. Metabolic design internalizes resilience costs—builds capacity before disaster rather than externalizing to emergency response."
                     },
                     dynamics: {
                         intro: "Dynamics examines how disaster recovery cycles, community cohesion feedbacks, and system transitions work.",
@@ -1159,106 +1178,120 @@ Federation Application: Bio-compatible design treats threshold dynamics as desig
                                 "How do policy cycles interact with disaster cycles? (Brief political attention, then fade before implementation)"
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Dynamics Dimension:\n\nDisaster cycles show predictable patterns: crisis → cohesion → recovery → forgetting → vulnerability → next crisis. This is a stable but pathological attractor. Breaking it requires sustained institutional memory and ongoing investment through the low-attention period. Thresholds matter: beyond damage levels, communities don't recover—they dissolve (population exodus, economic collapse).\n\nCommunity cohesion dynamics: Immediate post-disaster period shows dramatic mutual aid spike (high trust, shared purpose, visible need). This fades as normalcy returns unless institutionalized into ongoing practices. Cultural narratives matter: 'resilient community' identity creates positive attractor (pride in capability, ongoing preparation). 'Victim' narrative creates learned helplessness.\n\nSystem dynamics: Most organizations only shift after crisis. Challenger was NASA's threshold-crossing event—forced attractor shift from normalized deviance to safety-first culture (temporarily).\n\nFederation concept: Instead of waiting for crisis, bio-compatible design builds automatic circuit-breakers: when safety reports drop below threshold or near-misses spike, independent review triggers. Metrics force visibility before disaster. This treats dynamics as design constraint—don't rely on individual courage to overcome systemic extractive patterns."
+                        expert: "Expert ABCD Analysis - Dynamics Dimension:\n\nDisaster cycles show predictable patterns (recovery → forgetting → vulnerability). Breaking the cycle requires sustained institutional memory and ongoing investment against natural attention dynamics.\n\nRecovery dynamics: Thresholds (damage level) determine exodus vs. rebuilding. Positive feedback: strong bonds → faster recovery → strengthened community. Negative feedback: trauma → isolation → slower recovery.\n\nSystem dynamics: Political attention cycles (years) mismatch resilience needs (decades). Creates reactive spending, insufficient proactive building. Federation concept: Standing institutions with automatic triggers provide countercyclical stability, fighting attention cycle mismatch."
                     }
                 }
             },
 
             climate: {
-                title: "Climate Policy Coordination",
+                title: "Climate Policy and Global Coordination",
                 icon: "🌍",
                 scale: "National → Global",
-                description: "You're a policy advisor working on international climate agreements. The coordination problem is obvious: every nation benefits from others reducing emissions but faces domestic costs for its own reductions. Short-term economic incentives oppose long-term survival needs. Past agreements have failed to produce necessary action. How do you design coordination mechanisms that actually work at the scale required?",
+                description: "Nations are negotiating climate policy. Scientific consensus is clear: rapid reduction in emissions needed to avoid catastrophic warming. But coordination is failing across timescales: quarterly corporate earnings (months), election cycles (2-4 years), infrastructure lifetimes (decades), climate impacts (centuries), versus political action needed now. This is the ultimate timescale coordination challenge.",
                 
                 dimensions: {
                     agency: {
                         intro: "Agency examines who can act at which scales, and how capability is distributed or concentrated. Climate requires coordinated agency across nested levels.",
-                        scales: ["National", "International", "Distributed"],
+                        scales: ["Individual (immediate)", "National (years-decades)", "International (decades)", "Intergenerational (centuries)"],
                         questions: {
-                            National: [
-                                "What expands a nation's capability to act on climate? (Economic resources, political will, technological capacity)",
-                                "What constrains it? (Fossil fuel dependence, development needs, political polarization, short-term incentives)",
-                                "How does climate stress itself contract agency? (Disasters divert resources from mitigation to immediate response)"
+                            "Individual (immediate)": [
+                                "Individual agency on climate feels simultaneously crucial and inadequate. Your consumption choices (immediate timescale) have real but tiny impact. Flying less, eating less meat, using less energy—all matter, but individual action alone insufficient for needed system change.",
+                                "The agency paradox: You SHOULD act individually (consumption shapes markets, models behavior, maintains ethical coherence). But individual action alone CAN'T solve systemic problem requiring coordination at national/global scales. Both true simultaneously. How do you navigate this?",
+                                "Your immediate agency is constrained by context: Can you afford electric car? Live near public transit? Access plant-based food? Work remotely? Individual choices made within structures designed over decades that enable or constrain sustainable living. This is why individual responsibility can't substitute for systemic change."
                             ],
-                            International: [
-                                "What enables collective action among nations? (Treaties, economic incentives, shared monitoring, reputation mechanisms)",
-                                "What creates free-rider problems? (Benefits of others' action without bearing costs, enforcement difficulty)",
-                                "How do power asymmetries affect coordination? (Developed vs. developing nations, historical emissions vs. current capacity)"
+                            "National (years-decades)": [
+                                "National governments have agency to: set carbon prices, regulate emissions, subsidize renewables, invest in infrastructure, phase out fossil fuels. But political cycles (2-4 year elections) mismatch climate timescales (decades-centuries needed for transition).",
+                                "Coalition problem at national scale: Fossil fuel interests, short-term economic concerns, regional differences create political obstacles. Even when majority supports climate action, concentrated minority opposition can block policy. Agency exists in principle but constrained by political dynamics.",
+                                "What expands national agency? Carbon pricing (immediate feedback), long-term planning mandates (force future orientation), international agreements (external accountability), citizen pressure (voting, activism, organizing). Multiple pathways to policy change operating at different timescales."
                             ],
-                            Distributed: [
-                                "What role for non-state actors? (Cities, corporations, NGOs, citizen movements)",
-                                "How does polycentric governance expand agency? (Multiple actors at multiple scales, not waiting for international agreement)",
-                                "What would distributed coordination look like? (Many initiatives rather than single global deal)"
+                            "International (decades)": [
+                                "Global coordination requires nations to cooperate despite competing interests. Classical collective action problem: Each nation benefits from others reducing emissions while free-riding (avoiding own costs). Tragedy of temporal commons at planetary scale.",
+                                "International agency constrained by: Sovereignty (no world government to enforce agreements), inequality (developing nations prioritize poverty reduction over emissions), trust deficits (history of broken promises), timescale mismatches (political cycles vs. climate momentum).",
+                                "What creates functional coordination despite constraints? Treaty frameworks (Paris Agreement), financial transfers (climate finance for developing nations), technology sharing, coalition-building among willing nations, subnational action (cities, states, companies acting independently). Distributed coordination approaches when centralized authority impossible."
+                            ],
+                            "Intergenerational (centuries)": [
+                                "Future generations have NO current agency but MAXIMUM stake in outcomes. They can't vote, negotiate, or protest now, but they'll inherit consequences of choices made today. This is profound ethical asymmetry.",
+                                "How do you represent future interests in present decisions when they have no voice? Moral philosophy (intergenerational justice), legal frameworks (constitutional protections for future), political structures (guardians for future generations, longer election cycles), cultural shifts (make long-term thinking salient).",
+                                "Deep time perspective: Humans have inhabited Earth for 300,000 years. Might inhabit for millions more if we don't destroy conditions for civilization. Current generation's choices will shape planetary conditions for hundreds of thousands of years (carbon persists centuries, species extinctions permanent). Agency operates at cosmic timescale even though political systems operate at years timescale."
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Agency Dimension:\n\nClimate reveals limits of individual and national agency—no single actor can solve it alone, but all must act. National capability depends on resources, technology, and political capacity, but is constrained by fossil fuel lock-in, development needs, and short-term political cycles. Crucially, climate stress contracts agency: disasters divert resources from prevention to response (Sapolsky's allostatic load at national scale).\n\nInternational collective action faces classic free-rider problem: each nation benefits from others' emissions cuts without bearing costs of their own. Traditional treaties rely on enforcement mechanisms that don't exist at global scale (no world government). Power asymmetries matter: wealthy nations caused historical emissions but now demand poor nations forgo fossil-fueled development—equity crisis.\n\nPolycentric governance offers alternative: cities, states, corporations, NGOs act at their scales without waiting for international agreement. This is distributed agency—not heroic global deal but functional coordination through multiple mechanisms. Graeber & Wengrow: Large-scale cooperation doesn't require centralized authority—can emerge through standards, reciprocity, reputation. Connection to Federation: Nested sovereignty with clear protocols at each scale, not waiting for top-down global consensus."
+                        expert: "Expert ABCD Analysis - Agency Dimension:\n\nIndividual agency paradox: You SHOULD act individually (ethical coherence) AND individual action alone CAN'T solve systemic problem. Navigate by: act individually WHILE advocating systemically. Individual responsibility can't substitute for systemic change.\n\nNational agency constrained by political timescales: Governments CAN act but political cycles (years) mismatch climate timescales (decades-centuries). Requires institutional design that extends political thinking: carbon pricing, long-term planning mandates, constitutional protections.\n\nInternational collective action problem: Tragedy of commons at planetary scale. Agency constrained by sovereignty, inequality, trust deficits. Functional coordination requires distributed approaches (subnational action, technology sharing, coalition-building).\n\nIntergenerational asymmetry: Future generations have zero current voice but maximum stake. Represent their interests through legal frameworks (constitutional protections), political structures (guardians for future), cultural shifts valuing long-term thinking."
                     },
                     beauty: {
                         intro: "Beauty/Awe grounds climate action in planetary deep time and makes visible what's truly at stake—across scales from geological to generational.",
-                        scales: ["Deep Time", "Planetary", "Future"],
+                        scales: ["Immediate Visibility", "Planetary Boundaries", "Deep Time Heritage"],
                         questions: {
-                            "Deep Time": [
-                                "Earth's 4.5 billion year history includes five mass extinctions. We're in the sixth, human-caused. What does this deep time perspective add to climate urgency?",
-                                "The atmosphere enabling complex life took billions of years to form. We're altering it in decades. How does this timescale mismatch inform action?",
-                                "Consider: every atom of oxygen you breathe was created by photosynthetic organisms over geological time. What responsibility does this inheritance create?"
+                            "Immediate Visibility": [
+                                "Climate impacts becoming immediately salient: Extreme heat, unprecedented fires, severe storms, flooding, droughts. Each disaster makes abstract risk concrete. But disasters also normalize—'this is just how things are now.'",
+                                "Competing immediate salience: Climate urgency vs. daily economic pressures, long-term species survival vs. quarterly earnings. Your evolved attention systems didn't evolve to weight long-term abstract risks against immediate concrete needs. Making right things salient requires deliberate design.",
+                                "What makes climate viscerally salient vs. abstractly concerning? Personal experience (disaster affecting you directly), visible impacts (can SEE ecosystem decline), connection to affected communities (not abstract future but real present suffering). How do you make planetary-scale slow-moving catastrophe feel urgent enough to motivate action?"
                             ],
-                            Planetary: [
-                                "What makes Earth's fragility visible? (Images from space, ice core data, real-time CO2 measurements, species extinction rates)",
-                                "What currently captures attention vs. what should? (GDP growth vs. ecological stability, quarterly profits vs. generational survival)",
-                                "How could planetary boundaries be made salient to decision-makers? (Visualizations, ritual observations, shared dashboards)"
-                            ]
-                            ,
-                            Future: [
-                                "What vision of viable future could pull coordinated action? (Regenerative economies, climate-stable world for descendants)",
-                                "How do we make future generations' agency visible now? (They can't speak, vote, or negotiate—but their stakes are highest)",
-                                "What would make intergenerational justice beautiful and compelling enough to override short-term extraction?"
+                            "Planetary Boundaries": [
+                                "Earth operated in stable Holocene climate for 10,000 years, enabling agriculture and civilization. We're pushing beyond these boundaries: atmospheric CO2 highest in 3 million years, warming fastest in 66 million years, extinction rate comparable to mass extinction events. We're conducting planetary-scale experiment never done before.",
+                                "Deep time perspective on planetary boundaries: Earth has survived five mass extinctions over 500 million years. Each took millions of years to recover. Sixth extinction (current) is first caused by single species. Your actions contribute to planetary-scale transformation operating at geological timescales.",
+                                "Oxygen in atmosphere created by photosynthesis over billions of years. Stable climate is inheritance from 10,000 years of favorable conditions. Does recognizing this create sense of responsibility to protect what was inherited?"
+                            ],
+                            "Deep Time Heritage": [
+                                "Your capacity for moral reasoning about climate emerged over millions of years of human evolution, built on billions of years of biological evolution. You are 13.8 billion years of cosmic evolution temporarily aware of itself and capable of deciding planetary future. What responsibility does this create?",
+                                "Future generations will inherit consequences of current choices for hundreds of thousands of years. Ice sheets take millennia to reform if melted. Species extinctions permanent. Ecosystems take centuries to recover. You're making irrevocable decisions at political timescales (years) with impacts at geological timescales (millennia).",
+                                "Aspirational vision: Human civilization could last millions of years if we don't destroy conditions for our survival. The stable climate that enabled agriculture, cities, technology, art, science—all depend on planetary boundaries we're now crossing. Vision of sustainable civilization across deep time—does this create pull toward different choices?"
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Beauty/Awe Dimension:\n\nDeep time perspective is crushing and clarifying: five previous mass extinctions took millions of years to unfold and millions more to recover from. The sixth is unfolding in human timescales—we can watch it happen. The atmosphere sustaining complex life is a multi-billion-year inheritance we're destabilizing in decades. This isn't abstraction—it's planetary-scale vandalism of cosmic heritage.\n\nCurrently, wrong things are salient: GDP growth, stock prices, quarterly earnings, political polling. What should capture attention: atmospheric CO2 (crossing 420 ppm), species extinction rates (1000x background), ice sheet collapse trajectories, ocean acidification. Making these visible requires ritual: global 'quiet minutes' watching real-time CO2 monitors, satellite imagery of ice loss, shared dashboards of planetary boundaries.\n\nFuture generations can't negotiate because they don't exist yet—ultimate failure of voice. Their agency must be represented through institutional design: constitutional protections, long-term trusts, youth advocacy structures. Vision of viable future pulls action: regenerative rather than extractive economies, climate stability as public good, flourishing as collective goal. Connection to metabolic institutions: Climate-stable future requires internalizing carbon costs rather than externalizing to future generations' survival. Currently we're extracting present wealth by depleting future capacity."
+                        expert: "Expert ABCD Analysis - Beauty/Awe Dimension:\n\nImmediate visibility paradox: Climate impacts become salient but also normalize. Challenge: making long-term, abstract risks feel urgent against immediate concrete needs (economic pressure).\n\nPlanetary Boundaries (deep time context): We are pushing Earth's systems beyond the stable conditions that enabled civilization. Recognizing this cosmic heritage creates responsibility to protect what was inherited.\n\nIntergenerational deep time: Current choices at political timescales (years) have impacts at geological timescales (millennia). Aspirational vision: sustainable civilization across deep time, honoring cosmic heritage, building inheritance for descendants."
                     },
                     context: {
                         intro: "Context examines the infrastructure—economic, institutional, technological—that shapes what's possible at global scale.",
-                        scales: ["Economic", "Institutional", "Technological"],
+                        scales: ["Individual Infrastructure", "National Systems", "Global Economics", "Planetary Systems"],
                         questions: {
-                            Economic: [
-                                "What economic infrastructure locks in fossil fuel use? (Subsidies, sunk costs in infrastructure, price externalities)",
-                                "What context changes enable transition? (Carbon pricing, renewable cost curves, green finance mechanisms)",
-                                "How do trade systems create context for coordination or defection? (Border carbon adjustments, climate trade agreements)"
+                            "Individual Infrastructure": [
+                                "Your personal carbon footprint is embedded in infrastructure designed over decades: Car-dependent suburbs, fossil fuel energy grid, industrial food system. Individual choices made within these constraints.",
+                                "What's locally designable for you? Daily choices (consumption, transportation) within existing infrastructure. Some people have options (can afford electric car, live near transit, access plant-based food). Others don't. Context inequality creates responsibility inequality.",
+                                "HYBRID REALITY: Even within extractive infrastructure, metabolic pockets exist. Community gardens, bike infrastructure, local renewables, car sharing. Strategy: Use available metabolic options while advocating for systemic infrastructure redesign."
                             ],
-                            Institutional: [
-                                "What international institutions create context for cooperation? (UN climate framework, Paris Agreement, monitoring systems)",
-                                "What's missing? (Enforcement mechanisms, equity provisions, technology transfer infrastructure)",
-                                "What would Federation-style governance look like at climate scale? (Sortition panels for review, automatic circuit-breakers at thresholds)"
+                            "National Systems": [
+                                "National energy infrastructure: Fossil fuel systems built over century. Transition to renewables requires decades of parallel construction while maintaining energy supply. Physical infrastructure operates at decades timescale.",
+                                "Economic structural inertia: Fossil fuel subsidies (decades of policy), stranded assets, employment, lobbying power. These create structural inertia beyond individual political will.",
+                                "What's designable at national scale? Carbon pricing (immediate), subsidy shifts (years of policy change), infrastructure investment (decades of construction), regulatory phase-outs (decades for full transition)."
                             ],
-                            Technological: [
-                                "What technological infrastructure is needed? (Renewable energy, storage, transmission, monitoring)",
-                                "What standards enable coordination? (Interoperability, measurement protocols, data sharing)",
-                                "How does uneven technological capacity create equity issues? (Developed nations have resources, developing nations have needs)"
+                            "Global Economics": [
+                                "Global economic context: Trade locked into fossil fuels, development pathways (developing nations using cheap fossil energy), debt burdens. Inequality shapes context: Developed nations created 90% of historical emissions, developing nations face worst impacts with least resources.",
+                                "Inequality shapes context: Developed nations created 90% of historical emissions, developing nations face worst impacts with least resources to adapt. Justice question: Who pays for transition? Who sacrifices for emissions already released? Context of colonial extraction history affects contemporary climate negotiations.",
+                                "What's designable globally? Technology transfer, climate finance, debt relief, trade agreements (incorporating carbon costs). All requiring international coordination difficult to achieve but possible."
+                            ],
+                            "Planetary Systems": [
+                                "Planetary biogeochemical cycles operate at timescales far beyond human institutions: Carbon cycle (centuries for atmospheric CO2 to equilibrate), ice sheet dynamics (millennia), ocean circulation (decades-centuries).",
+                                "We've altered planetary systems at geological speed: Atmospheric CO2 rising 100x faster than any time in 66 million years. Ecosystems can't adapt—evolution operates at thousands of years, we're changing conditions in decades. This is why extinction is accelerating.",
+                                "Some planetary changes now irreversible on human timescales: Ice sheets melting (centuries-millennia to reverse), species extinctions (permanent), ocean acidification (centuries to recover). We've crossed thresholds where even stopping all emissions now doesn't prevent major impacts."
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Context Dimension:\n\nEconomic context is fossil fuel lock-in: subsidies ($5+ trillion annually), sunk costs in infrastructure, and externalized costs (climate damage not in prices). Changing context requires carbon pricing that internalizes costs, renewable cost curves that make alternatives cheaper (already happening with solar/wind), and green finance mechanisms that redirect capital flows. Trade context matters: border carbon adjustments prevent 'carbon leakage' (moving production to low-regulation countries).\n\nInstitutional context is weak: Paris Agreement lacks enforcement, monitoring is voluntary, equity provisions are inadequate. Missing infrastructure: no mechanism to ensure wealthy nations compensate poor ones for climate damages or fund their transitions. What's needed: automatic triggers (when emissions don't decline, protocols activate), independent review (sortition panels, not political negotiation), and circuit-breakers (hard limits that can't be overridden by meetings).\n\nTechnological context: Renewable infrastructure is necessary but not sufficient—needs storage, transmission, and coordination systems. Standards matter: measurement protocols that enable verification, data sharing that makes impacts visible, interoperability that allows system integration. Equity crisis: developed nations have resources to transition; developing nations need both development and decarbonization. Technology transfer and capacity building are context design—expanding possibility space for all nations. Connection to metabolic design: Climate-stable context requires infrastructure that internalizes carbon costs at every level, not externalizing to atmosphere and future."
+                        expert: "Expert ABCD Analysis - Context Dimension:\n\nIndividual infrastructure: Choices constrained by inherited structures (car-dependent suburbs, fossil fuel grid). Strategy: Use available metabolic options while advocating for systemic infrastructure redesign.\n\nNational systems: Political cycles (years) mismatch infrastructure timescale (decades). Transition requires sustained political will and decades of investment.\n\nGlobal economics: Coordination failure due to sovereignty, inequality, and historical debt. Justice question: Who pays for transition? Requires global governance innovation.\n\nPlanetary systems: We are operating at geological speed, causing irreversible changes (melting ice sheets, extinctions). This requires urgency (mitigation) and adaptation (preparing for unavoidable impacts)."
                     },
                     dynamics: {
                         intro: "Dynamics examines feedback loops, tipping points, and attractor shifts in climate systems and human coordination.",
-                        scales: ["Climate System", "Economic", "Political"],
+                        scales: ["Climate Tipping Points", "Economic Feedbacks", "Political Cycles", "Intergenerational Cascades"],
                         questions: {
-                            "Climate System": [
-                                "What feedback loops accelerate warming? (Ice-albedo, permafrost methane, forest die-off, ocean carbon absorption decline)",
-                                "What are the critical tipping points? (Ice sheet collapse, AMOC shutdown, Amazon transition, permafrost thaw)",
-                                "How do cascading failures work? (One tipping point triggers others—threshold dynamics with hysteresis)"
+                            "Climate Tipping Points": [
+                                "Climate system has tipping points: Arctic sea ice (albedo feedback), Amazon rainforest (approaching), ice sheets (potentially destabilizing). Each can trigger cascades making others more likely.",
+                                "Tipping points are thresholds where gradual change suddenly accelerates: Ice melts → dark ocean absorbs heat → more ice melts (self-reinforcing). Before threshold: reversible. After: self-accelerating even if emissions stop.",
+                                "We don't know exactly where thresholds are until crossed. Not uncertainty meaning delay—uncertainty meaning urgency (precautionary principle: don't find tipping points by crossing them)."
                             ],
                             Economic: [
-                                "What economic feedbacks maintain fossil fuel dependence? (Infrastructure lock-in, political lobbying, employment, tax revenue)",
-                                "What could shift the economic attractor? (Renewable cost parity, stranded asset recognition, green finance growth)",
-                                "How do economic and climate dynamics interact? (Climate damages slow growth, which reduces mitigation capacity—positive feedback)"
+                                "Economic feedbacks maintaining fossil dependence: Infrastructure lock-in, political lobbying, employment, tax revenue. Breaking requires overcoming structural momentum built over century.",
+                                "Positive feedback possible: Renewable cost declining → more deployment → further cost reduction. Already happening. But transition speed matters—climate operates at atmospheric timescale, economy at investment timescale, gap creates damage.",
+                                "Stranded asset dynamics: Trillions in fossil infrastructure that becomes worthless in transition. Creates financial incentive to delay (extract value before obsolescence) conflicting with climate urgency (rapid phase-out)."
                             ],
                             Political: [
-                                "What political dynamics create coordination failure? (Short election cycles, free-rider incentives, partisan polarization)",
-                                "What shifts political attractors? (Visible disasters, youth movements, economic transitions making change inevitable)",
-                                "How could sustained action be maintained across political cycles? (Constitutional protections, independent institutions, automatic triggers)"
+                                "Political dynamics create coordination failure: Short election cycles, free-rider incentives, partisan polarization. Breaking requires institutional design that extends political thinking: long-term planning mandates, carbon budgets, constitutional protections.",
+                                "Political attention cycles mismatch climate needs: Pre-disaster (low salience) → Disaster (spike) → Months after (fading) → Years after (forgotten). Pattern repeats without sustained action.",
+                                "What breaks attention cycle? Institutional design extending political thinking (long-term planning mandates, carbon budgets, independent climate councils), sustained citizen pressure (organizing not dependent on crises), crisis severity (finally forcing sustained attention)."
+                            ],
+                            "Intergenerational Cascades": [
+                                "Emissions now create impacts for centuries: CO2 persists in atmosphere for centuries, ice sheet changes unfold over millennia. Today's choices cascade through hundreds of generations who have no say in decisions affecting them.",
+                                "Each generation faces choice: Act (bear transition costs, create better inheritance for future) or defer (pass larger problem to children). Tragedy of temporal commons—each generation's rational response (minimize own costs) creates collectively catastrophic outcome (crisis worsens).",
+                                "Breaking intergenerational coordination failure requires: Legal frameworks for future interests, political structures representing future generations, cultural shifts valuing long-term, ethical frameworks of intergenerational justice."
                             ]
                         },
-                        expert: "Expert ABCD Analysis - Dynamics Dimension:\n\nClimate system has multiple reinforcing feedbacks: warming melts ice → less reflection → more warming. Permafrost thaw releases methane → more warming → more thaw. These are threshold-crossing events: once ice sheets destabilize, they don't restabilize at current temperatures (hysteresis). Multiple tipping points can cascade: Amazon forest die-off → carbon release → warming → AMOC shutdown → regional climate shift → more ecosystem collapse.\n\nEconomic dynamics maintain fossil fuel lock-in through infrastructure (sunk costs make transition expensive), political economy (industry lobbying, employment, tax revenue), and price externalities (climate damage not reflected in fossil fuel prices). Shift requires crossing threshold where renewables are cheaper AND political will exists to strand fossil assets. This is attractor change—requires coordinated action at scale to overcome inertia.\n\nPolitical dynamics are mismatched to climate timescales: 2-6 year election cycles against century-scale challenges. Free-rider problem and partisan polarization create coordination failure. Shift typically requires crisis (visible disasters) or movement pressure (youth climate strikes) making inaction politically costly. Sustaining action across political cycles requires institutional design: constitutional climate protections, independent climate authorities, automatic policy triggers that activate when emissions don't decline.\n\nConnection to Federation: Bio-compatible climate governance would have circuit-breakers—when emissions cross thresholds or tipping points approach, automatic protocols activate (carbon rationing, emergency mobilization, resource redirection). No election can override biophysical limits. This treats dynamics as design constraints, embedding climate stability into governance infrastructure rather than hoping political will persists."
+                        expert: "Expert ABCD Analysis - Dynamics Dimension:\n\nClimate tipping points: Thresholds where gradual change accelerates irreversibly. Requires urgent action (precautionary principle).\n\nEconomic feedbacks: Infrastructure lock-in maintains fossil dependence. Positive feedback from renewables is gaining momentum, but transition speed is critical.\n\nPolitical cycles: Mismatch climate needs. Institutional design must force long-term thinking.\n\nIntergenerational cascades: Today's decisions affect centuries of future generations. Tragedy of temporal commons requires structural changes to represent future interests."
                     }
                 }
             }
@@ -1297,8 +1330,6 @@ Federation Application: Bio-compatible design treats threshold dynamics as desig
             currentDimension = 'agency';
             initializeScales();
             renderDimension();
-            renderTimescaleSynthesis(); // Render the new synthesis section
-            updateProgress();
             
             // Scroll to workspace
             document.getElementById('workspace').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1375,55 +1406,243 @@ Federation Application: Bio-compatible design treats threshold dynamics as desig
                 </div>
             `;
             
-            document.getElementById('dimension-container').innerHTML = html;
-        }
-        
-        function renderTimescaleSynthesis() {
-            // Only render for the STRESS scenario which has the full timescale data
-            if (currentScenario !== 'stress') {
-                document.getElementById('timescale-synthesis-container').innerHTML = '';
-                return;
+            // Determine if the new synthesis sections should be rendered after the Dynamics tab
+            if (currentDimension === 'dynamics') {
+                html += renderTimescaleInteractions(currentScenario);
+                html += renderFunctionallyEquivalentSolutions(currentScenario);
             }
 
-            const expertAgency = scenarios.stress.dimensions.agency.expert;
+            document.getElementById('dimension-container').innerHTML = html;
             
-            // Extract CASCADE PATTERN and FUNCTIONALLY EQUIVALENT SOLUTIONS
-            const cascadeMatch = expertAgency.match(/\*\*THE CASCADE PATTERN:\*\*(.*?)\*\*INTERVENTION BY TIMESCALE:\*\*/s);
-            const solutionMatch = expertAgency.match(/\*\*FUNCTIONALLY EQUIVALENT SOLUTIONS:\*\*(.*?)\*\*CONNECTION TO CHAPTER 3:\*\*/s);
-
-            const cascadePattern = cascadeMatch ? cascadeMatch[1].trim() : "Analysis not available.";
-            const solutionListRaw = solutionMatch ? solutionMatch[1].trim() : "Analysis not available.";
-            
-            // Convert list items to structured array
-            const solutionList = solutionListRaw.split('\n').filter(line => line.startsWith('-')).map(line => line.trim().substring(1).trim());
-
-            let html = `
-                <div class="timescale-synthesis">
-                    <h4>Timescale Synthesis: Agency Cascade and Solvency Solutions</h4>
-
-                    <div class="pattern-box">
-                        <h5>Agency Degradation Cascade Pattern (The Debt Accumulation)</h5>
-                        <p class="text-sm text-neutral-700">${cascadePattern.replace(/\*\*/g, '')}</p>
-                        <p class="text-xs text-neutral-600 mt-2"><strong>Insight:</strong> One instant event initiates a predictable, decade-long trajectory of **Neurological Debt** accumulation, requiring intervention at the correct timescale to interrupt the cascade.</p>
+            // Re-load data for the new synthesis sections (which are outside the main Q&A loop)
+            if (currentDimension === 'dynamics') {
+                document.getElementById('cascade-mapping').value = localStorage.getItem(`${currentScenario}_cascade`) || '';
+                document.getElementById('threshold-identification').value = localStorage.getItem(`${currentScenario}_threshold`) || '';
+                document.getElementById('intervention-timing').value = localStorage.getItem(`${currentScenario}_intervention`) || '';
+                
+                document.getElementById('core-need').value = localStorage.getItem(`${currentScenario}_need`) || '';
+                document.getElementById('immediate-solution').value = localStorage.getItem(`${currentScenario}_immediate`) || '';
+                document.getElementById('shortterm-solution').value = localStorage.getItem(`${currentScenario}_shortterm`) || '';
+                document.getElementById('mediumterm-solution').value = localStorage.getItem(`${currentScenario}_mediumterm`) || '';
+                document.getElementById('longterm-solution').value = localStorage.getItem(`${currentScenario}_longterm`) || '';
+                document.getElementById('combination-strategy').value = localStorage.getItem(`${currentScenario}_strategy`) || '';
+            }
+        }
+        
+        // NEW SECTION: Timescale Interactions Analysis (Rendered under Dynamics)
+        function renderTimescaleInteractions(scenario) {
+            return `
+                <div class="synthesis-section" style="margin-top: 3rem;">
+                    <h3>🔄 Timescale Interactions: How Events Cascade</h3>
+                    
+                    <p style="margin-bottom: 2rem; color: var(--text-light);">
+                        You've analyzed this situation across four dimensions at multiple timescales. Now examine how timescales <strong>interact</strong>—how events at one timescale cascade to others, creating the complex dynamics you're navigating.
+                    </p>
+                    
+                    <div class="question-group">
+                        <h5>Identify a Timescale Cascade</h5>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">
+                            <strong>Example:</strong> Boss's criticism (instant event) → cortisol spike (seconds) → rumination (hours) → poor sleep (hours) → impaired next day (days) → pattern establishes (weeks) → chronic anxiety (months) → capability degradation (years)
+                        </p>
+                        <textarea 
+                            id="cascade-mapping" 
+                            oninput="saveInteractionResponse('cascade-mapping', 'cascade')"
+                            placeholder="Map a cascade in YOUR situation: What instant or acute event might create chronic effects if sustained? Trace the pathway: seconds → minutes → hours → days → weeks → months → years. Where does one timescale trigger the next?"
+                            style="width: 100%; min-height: 120px; padding: 1rem; border: 2px solid var(--border); border-radius: 0.5rem; font-family: 'Work Sans', sans-serif; resize: vertical;"
+                        ></textarea>
+                        <div class="save-indicator" id="cascade-save" style="margin-top: 0.5rem; color: var(--agency); font-size: 0.9rem; opacity: 0;">✓ Saved</div>
                     </div>
-
-                    <div class="pattern-box">
-                        <h5>Functionally Equivalent Structural Solutions</h5>
-                        <p class="text-sm text-neutral-700">All interventions, from daily habits to policy changes, are functionally equivalent—they target the same biological need (HPA axis recovery, PFC protection) across different timescales.</p>
-                        <div class="solution-grid">
-                            ${solutionList.map(sol => `
-                                <div class="solution-card">
-                                    ${sol.replace(/\*\*/g, '')}
-                                </div>
-                            `).join('')}
-                        </div>
-                        <p class="text-xs text-neutral-600 mt-2"><strong>Principle:</strong> Individual resilience cannot overcome chronic extractive context. The solution must be structural, matching the intervention timescale to the problem timescale.</p>
+                    
+                    <div class="question-group" style="margin-top: 2rem;">
+                        <h5>Threshold Crossing: When Does Acute Become Chronic?</h5>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">
+                            Sapolsky's finding: <strong>Acute stress (minutes-hours) is helpful. Chronic stress (weeks-months) is catastrophic.</strong> But there's a threshold where one becomes the other. Where is it in your situation?
+                        </p>
+                        <textarea 
+                            id="threshold-identification" 
+                            oninput="saveInteractionResponse('threshold-identification', 'threshold')"
+                            placeholder="What indicators tell you when helpful stress has crossed into harmful territory? (Sleep disruption persisting? Recovery not happening? Baseline anxiety increasing?) Have you already crossed this threshold, or can you still prevent it?"
+                            style="width: 100%; min-height: 120px; padding: 1rem; border: 2px solid var(--border); border-radius: 0.5rem; font-family: 'Work Sans', sans-serif; resize: vertical;"
+                        ></textarea>
+                        <div class="save-indicator" id="threshold-save" style="margin-top: 0.5rem; color: var(--agency); font-size: 0.9rem; opacity: 0;">✓ Saved</div>
+                    </div>
+                    
+                    <div class="question-group" style="margin-top: 2rem;">
+                        <h5>Intervention Timing: Which Timescale?</h5>
+                        <p style="color: var(--text-light); margin-bottom: 1rem;">
+                            Different problems require interventions at different timescales. Acute problem needs acute solution. Chronic problem needs sustained intervention. <strong>Wrong timescale = ineffective.</strong>
+                        </p>
+                        <textarea 
+                            id="intervention-timing" 
+                            oninput="saveInteractionResponse('intervention-timing', 'intervention')"
+                            placeholder="Is your situation acute (will resolve in hours-days) or chronic (weeks-months of activation)? What timescale intervention does this actually require? Are you trying to solve a chronic problem with acute interventions (meditation for institutional extraction)?"
+                            style="width: 100%; min-height: 120px; padding: 1rem; border: 2px solid var(--border); border-radius: 0.5rem; font-family: 'Work Sans', sans-serif; resize: vertical;"
+                        ></textarea>
+                        <div class="save-indicator" id="intervention-save" style="margin-top: 0.5rem; color: var(--agency); font-size: 0.9rem; opacity: 0;">✓ Saved</div>
+                    </div>
+                    
+                    <div class="expert-section" style="margin-top: 2rem; background: #fef3c7; padding: 2rem; border-radius: 0.75rem; border-left: 4px solid var(--beauty);">
+                        <h4 style="font-family: 'Spectral', serif; margin-bottom: 1rem;">✨ Understanding Timescale Cascades</h4>
+                        
+                        <p><strong>The power of timescale thinking:</strong> You can interrupt cascades by intervening at the right timescale before effects lock in.</p>
+                        
+                        <p style="margin-top: 1rem;"><strong>Example cascade with interventions:</strong></p>
+                        <p style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            Stressful meeting (instant) → <strong>[Intervention: 5-min breathing]</strong> → prevents cortisol lock-in (minutes) → <strong>[Intervention: reframe after work]</strong> → prevents rumination (hours) → <strong>[Intervention: protect sleep]</strong> → prevents next-day reactivity (days) → <strong>[Intervention: weekly recovery time]</strong> → prevents chronic pattern (weeks)
+                        </p>
+                        
+                        <p style="margin-top: 1rem;">Each intervention is small, but properly timed across timescales, they prevent the cascade from reaching chronic territory.</p>
+                        
+                        <p style="margin-top: 1rem;"><strong>When cascades can't be interrupted individually:</strong> If you're already in chronic territory (months of activation), individual timescale interventions won't suffice. You need <strong>context change at the institutional timescale</strong> (years: policy change) or personal timescale (exit to different context).</p>
+                        
+                        <p style="margin-top: 1rem;">This is why understanding timescales matters: You match intervention to problem timescale. Meditation (immediate) won't fix institutional extraction (years). Policy change (years) won't help acute crisis (hours). <strong>Multi-timescale problems require multi-timescale solutions.</strong></p>
                     </div>
                 </div>
             `;
-
-            document.getElementById('timescale-synthesis-container').innerHTML = html;
         }
+
+        // NEW SECTION: Functionally Equivalent Solutions (Rendered under Dynamics)
+        function renderFunctionallyEquivalentSolutions(scenario) {
+            return `
+                <div class="synthesis-section" style="margin-top: 3rem;">
+                    <h3>🔀 Functionally Equivalent Solutions Across Timescales</h3>
+                    
+                    <p style="margin-bottom: 1.5rem; color: var(--text-light);">
+                        You've analyzed across dimensions and timescales. Now generate <strong>functionally equivalent solutions</strong>—different pathways that address the same underlying biological or coordination need through interventions at different timescales.
+                    </p>
+                    
+                    <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 0.75rem; margin-bottom: 2rem; border-left: 4px solid var(--primary);">
+                        <p style="margin-bottom: 1rem;"><strong>Example: Workplace Stress</strong></p>
+                        <p style="margin-bottom: 0.5rem;">Underlying need: <strong>HPA axis recovery and prefrontal cortex protection</strong></p>
+                        <p style="margin-left: 1rem; margin-bottom: 0.25rem;">• <strong>Immediate (minutes):</strong> Daily walks → acute cortisol reduction</p>
+                        <p style="margin-left: 1rem; margin-bottom: 0.25rem;">• <strong>Weekly:</strong> No-meeting Fridays → prevents weekly accumulation</p>
+                        <p style="margin-left: 1rem; margin-bottom: 0.25rem;">• <strong>Monthly:</strong> Use vacation days → full system reset</p>
+                        <p style="margin-left: 1rem; margin-bottom: 0.25rem;">• <strong>Yearly:</strong> Negotiate flexibility → changes context permanently</p>
+                        <p style="margin-left: 1rem; margin-bottom: 0.25rem;">• <strong>Systemic:</strong> Advocate workload monitoring → redesigns for everyone</p>
+                        <p style="margin-top: 1rem;"><strong>All address SAME need</strong> (biological recovery) through different timescale interventions.</p>
+                    </div>
+                    
+                    <div class="question-group">
+                        <h5>Step 1: Identify the Core Biological or Coordination Need</h5>
+                        <textarea 
+                            id="core-need" 
+                            oninput="saveInteractionResponse('core-need', 'need')"
+                            placeholder="What underlying need must be met for coordination to work in your situation? Examples: stress recovery, safety protection, capability building, relationship repair, agency restoration, sustainable resource use"
+                            style="width: 100%; min-height: 100px; padding: 1rem; border: 2px solid var(--border); border-radius: 0.5rem; font-family: 'Work Sans', sans-serif; resize: vertical;"
+                        ></textarea>
+                        <div class="save-indicator" id="need-save" style="margin-top: 0.5rem; color: var(--agency); font-size: 0.9rem; opacity: 0;">✓ Saved</div>
+                    </div>
+                    
+                    <div class="question-group" style="margin-top: 2rem;">
+                        <h5>Step 2: Generate Solutions at Different Timescales</h5>
+                        
+                        <p style="color: var(--text-light); margin-bottom: 0.5rem;"><strong>Immediate (minutes-hours):</strong> What could you do right now or today?</p>
+                        <textarea 
+                            id="immediate-solution" 
+                            oninput="saveInteractionResponse('immediate-solution', 'immediate')"
+                            placeholder="Quick intervention that addresses need at immediate timescale (breathing exercise, conversation, environmental change, brief action)"
+                            style="width: 100%; min-height: 80px; padding: 1rem; border: 2px solid var(--border); border-radius: 0.5rem; font-family: 'Work Sans', sans-serif; resize: vertical;"
+                        ></textarea>
+                        
+                        <p style="color: var(--text-light); margin-bottom: 0.5rem; margin-top: 1.5rem;"><strong>Short-term (days-weeks):</strong> What patterns or practices over days/weeks?</p>
+                        <textarea 
+                            id="shortterm-solution" 
+                            oninput="saveInteractionResponse('shortterm-solution', 'shortterm')"
+                            placeholder="Daily or weekly intervention (routine changes, regular practices, team agreements)"
+                            style="width: 100%; min-height: 80px; padding: 1rem; border: 2px solid var(--border); border-radius: 0.5rem; font-family: 'Work Sans', sans-serif; resize: vertical;"
+                        ></textarea>
+                        
+                        <p style="color: var(--text-light); margin-bottom: 0.5rem; margin-top: 1.5rem;"><strong>Medium-term (weeks-months):</strong> What sustained changes over months?</p>
+                        <textarea 
+                            id="mediumterm-solution" 
+                            oninput="saveInteractionResponse('mediumterm-solution', 'mediumterm')"
+                            placeholder="Monthly or quarterly intervention (systematic changes, coalition building, sustained advocacy)"
+                            style="width: 100%; min-height: 80px; padding: 1rem; border: 2px solid var(--border); border-radius: 0.5rem; font-family: 'Work Sans', sans-serif; resize: vertical;"
+                        ></textarea>
+                        
+                        <p style="color: var(--text-light); margin-bottom: 0.5rem; margin-top: 1.5rem;"><strong>Long-term (years-decades):</strong> What structural or institutional changes?</p>
+                        <textarea 
+                            id="longterm-solution" 
+                            oninput="saveInteractionResponse('longterm-solution', 'longterm')"
+                            placeholder="Yearly negotiation, institutional redesign, policy advocacy, or complete context shift (exit to different organization/system)"
+                            style="width: 100%; min-height: 80px; padding: 1rem; border: 2px solid var(--border); border-radius: 0.5rem; font-family: 'Work Sans', sans-serif; resize: vertical;"
+                        ></textarea>
+                        
+                        <div class="save-indicator" id="solutions-save" style="margin-top: 0.5rem; color: var(--agency); font-size: 0.9rem; opacity: 0;">✓ Saved</div>
+                    </div>
+                    
+                    <div class="question-group" style="margin-top: 2rem;">
+                        <h5>Step 3: Strategic Combination</h5>
+                        <textarea 
+                            id="combination-strategy" 
+                            oninput="saveInteractionResponse('combination-strategy', 'strategy')"
+                            placeholder="Which timescale interventions are most feasible right now? Could you combine several (immediate + weekly + yearly advocacy)? What's your multi-timescale strategy? Remember: You don't have to choose one—you can work at multiple timescales simultaneously."
+                            style="width: 100%; min-height: 120px; padding: 1rem; border: 2px solid var(--border); border-radius: 0.5rem; font-family: 'Work Sans', sans-serif; resize: vertical;"
+                        ></textarea>
+                        <div class="save-indicator" id="strategy-save" style="margin-top: 0.5rem; color: var(--agency); font-size: 0.9rem; opacity: 0;">✓ Saved</div>
+                    </div>
+                    
+                    <div class="expert-section" style="margin-top: 2rem; background: #d1fae5; padding: 2rem; border-radius: 0.75rem; border-left: 4px solid var(--agency);">
+                        <h4 style="font-family: 'Spectral', serif; margin-bottom: 1rem;">✨ The Power of Functional Equivalence</h4>
+                        
+                        <p><strong>Key insight:</strong> Traditional ethics often presents binary choices (act or don't act, this option or that). Timescale thinking reveals <strong>multiple pathways</strong> to same outcome.</p>
+                        
+                        <p style="margin-top: 1rem;">All functionally equivalent solutions address the SAME coordination need, but:</p>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text);">
+                            <li style="margin-bottom: 0.5rem;"><strong>Different feasibility:</strong> Immediate interventions easy but limited impact; systemic changes hard but transformative</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>Different timescales of effect:</strong> Breathing (instant relief), therapy (months), job change (immediate context shift), policy reform (years of impact)</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>Different scope:</strong> Individual vs. collective vs. institutional</li>
+                        </ul>
+                        
+                        <p style="margin-top: 1rem;"><strong>Strategic approach:</strong> Don't choose one—combine across timescales:</p>
+                        <p style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            Immediate coping (keeps you functional now) + weekly recovery (prevents accumulation) + quarterly negotiation (improves context) + coalition advocacy (changes system for everyone)
+                        </p>
+                        
+                        <p style="margin-top: 1rem;"><strong>This is what ABCD enables:</strong> Seeing intervention opportunities at multiple timescales that single-lens analysis misses. You're not limited to "work harder" (individual) or "wait for systemic change" (institutional). You can act strategically across multiple timescales simultaneously.</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Custom save function for the new interaction textareas
+        function saveInteractionResponse(id, keySuffix) {
+            const idSelector = document.getElementById(id);
+            if (idSelector) {
+                localStorage.setItem(`${currentScenario}_${keySuffix}`, idSelector.value);
+                // The element ID for the save indicator is derived from the input ID (e.g., 'cascade-mapping' -> 'cascade-save')
+                const indicatorId = id.split('-')[0] + '-save'; 
+                showSaveIndicator(indicatorId);
+            }
+        }
+
+        // Auto-save for interaction fields
+        document.addEventListener('input', (e) => {
+            const id = e.target.id;
+            
+            // Check if the input is one of the new interaction fields (not the main Q&A textareas)
+            if (id === 'cascade-mapping') {
+                saveInteractionResponse(id, 'cascade');
+            } else if (id === 'threshold-identification') {
+                saveInteractionResponse(id, 'threshold');
+            } else if (id === 'intervention-timing') {
+                saveInteractionResponse(id, 'intervention');
+            } else if (id === 'core-need') {
+                saveInteractionResponse(id, 'need');
+            } else if (id === 'immediate-solution') {
+                saveInteractionResponse(id, 'immediate');
+            } else if (id === 'shortterm-solution') {
+                saveInteractionResponse(id, 'shortterm');
+            } else if (id === 'mediumterm-solution') {
+                saveInteractionResponse(id, 'mediumterm');
+            } else if (id === 'longterm-solution') {
+                saveInteractionResponse(id, 'longterm');
+            } else if (id === 'combination-strategy') {
+                saveInteractionResponse(id, 'strategy');
+            }
+        });
+        
+        // --- END NEW FUNCTIONS ---
 
         function getDimensionName(dim) {
             const names = {
@@ -1452,22 +1671,34 @@ Federation Application: Bio-compatible design treats threshold dynamics as desig
             // Save to localStorage
             localStorage.setItem('abcd_responses', JSON.stringify(userResponses));
             
-            // Show save indicator
-            showSaveIndicator();
+            // Show save indicator (original simple one)
+            showSaveIndicator(null);
             updateProgress();
         }
 
+        // Custom indicator for the new sections
+        function showSaveIndicator(id) {
+            const indicator = document.getElementById(id || 'save-indicator');
+            
+            // Use the small, local indicator if an ID is provided
+            if (id) {
+                indicator.style.opacity = 1;
+                setTimeout(() => {
+                    indicator.style.opacity = 0;
+                }, 1500);
+            } else {
+                // Use the large fixed indicator otherwise
+                const fixedIndicator = document.getElementById('save-indicator');
+                fixedIndicator.classList.add('show');
+                setTimeout(() => {
+                    fixedIndicator.classList.remove('show');
+                }, 2000);
+            }
+        }
+        
         function getResponse(dimension, scale, questionIndex) {
             const key = `${currentScenario}-${dimension}-${scale}-${questionIndex}`;
             return userResponses[currentScenario]?.[key] || '';
-        }
-
-        function showSaveIndicator() {
-            const indicator = document.getElementById('save-indicator');
-            indicator.classList.add('show');
-            setTimeout(() => {
-                indicator.classList.remove('show');
-            }, 2000);
         }
 
         function updateProgress() {
@@ -1494,7 +1725,6 @@ Federation Application: Bio-compatible design treats threshold dynamics as desig
         }
 
         function showSynthesis() {
-            // Now renders the synthesis in place, but keeps the old alert() for now
             alert('Synthesis view is now integrated below the dimension tabs!');
         }
 
@@ -1519,21 +1749,37 @@ Federation Application: Bio-compatible design treats threshold dynamics as desig
                 });
             });
             
-            // Add the final Synthesis summary for the stress scenario
-            if (currentScenario === 'stress') {
-                const expertAgency = scenarios.stress.dimensions.agency.expert;
-                const solutionMatch = expertAgency.match(/\*\*FUNCTIONALLY EQUIVALENT SOLUTIONS:\*\*(.*?)\*\*CONNECTION TO CHAPTER 3:\*\*/s);
-                const solutionListRaw = solutionMatch ? solutionMatch[1].trim() : "Analysis not available.";
-                const solutionList = solutionListRaw.split('\n').filter(line => line.startsWith('-')).map(line => line.trim().substring(1).trim());
-
+            // Add Timescale Interactions (New Section)
+            if (currentScenario === 'stress' || currentScenario === 'safety' || currentScenario === 'community' || currentScenario === 'climate') {
                 output += `\n\n========================================\n`;
-                output += `FUNCTIONALLY EQUIVALENT SOLUTIONS (Structural Solvency)\n`;
+                output += `TIMESCALES & INTERVENTION STRATEGY\n`;
                 output += `========================================\n`;
-                output += `The following structural interventions all address the SAME biological need (PFC/HPA axis recovery) across different timescales:\n`;
-                solutionList.forEach(sol => {
-                    output += `- ${sol.replace(/\*\*/g, '')}\n`;
-                });
-                output += `\nPrinciple: The solution must match the intervention timescale to the problem timescale.\n`;
+                
+                // Load data from localStorage for the new sections
+                const cascadeMap = localStorage.getItem(`${currentScenario}_cascade`) || '[Not answered]';
+                const thresholdId = localStorage.getItem(`${currentScenario}_threshold`) || '[Not answered]';
+                const interventionT = localStorage.getItem(`${currentScenario}_intervention`) || '[Not answered]';
+
+                const coreNeed = localStorage.getItem(`${currentScenario}_need`) || '[Not answered]';
+                const immediateS = localStorage.getItem(`${currentScenario}_immediate`) || '[Not answered]';
+                const shorttermS = localStorage.getItem(`${currentScenario}_shortterm`) || '[Not answered]';
+                const mediumtermS = localStorage.getItem(`${currentScenario}_mediumterm`) || '[Not answered]';
+                const longtermS = localStorage.getItem(`${currentScenario}_longterm`) || '[Not answered]';
+                const comboStrategy = localStorage.getItem(`${currentScenario}_strategy`) || '[Not answered]';
+
+                output += `\n--- CASCADE ANALYSIS ---\n`;
+                output += `1. Timescale Cascade Mapping:\n${cascadeMap}\n\n`;
+                output += `2. Acute/Chronic Threshold:\n${thresholdId}\n\n`;
+                output += `3. Intervention Timing Need:\n${interventionT}\n\n`;
+
+                output += `\n--- FUNCTIONALLY EQUIVALENT SOLUTIONS ---\n`;
+                output += `Core Need Identified: ${coreNeed}\n\n`;
+                output += `IMMEDIATE Solution (Minutes-Hours): ${immediateS}\n`;
+                output += `SHORT-TERM Solution (Days-Weeks): ${shorttermS}\n`;
+                output += `MEDIUM-TERM Solution (Weeks-Months): ${mediumtermS}\n`;
+                output += `LONG-TERM Solution (Years-Decades): ${longtermS}\n\n`;
+                output += `Strategic Combination:\n${comboStrategy}\n\n`;
+                output += `Principle: Multi-timescale problems require multi-timescale solutions.\n`;
             }
 
             // Create download
